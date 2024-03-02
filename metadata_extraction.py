@@ -1,6 +1,4 @@
 import os
-from datetime import datetime
-import numpy as np
 import pydicom
 from concurrent.futures import ProcessPoolExecutor, as_completed
 import multiprocessing
