@@ -156,7 +156,7 @@ def extract_haralick_features(image, sigma=5, visualize=False):
         plt.title("Haralick Features")
         imshow(h_feature)
 
-    return h_feature
+    return h_feature.mean(axis=0)
 
 
 def calculate_gabor_features(image, frequency, theta, visualize=False):
@@ -442,6 +442,7 @@ def process_file(hdf5_path, filename):
         if filename in f:
             pixel_array = f[filename][:]
             features = extract_pixels_features(pixel_array)
+            features["filename"] = filename
             return features
     return None
 
@@ -470,6 +471,7 @@ def process_batch(hdf5_path, file_batch):
             if filename in f:
                 pixel_array = f[filename][:]
                 features = extract_pixels_features(pixel_array)
+                features["filename"] = filename
                 features_list.append(features)
     return features_list
 
