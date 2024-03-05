@@ -30,18 +30,16 @@ class ChestXrayDataset(Dataset):
             A.Normalize(),
             ToTensorV2()
         ], bbox_params=A.BboxParams(format='pascal_voc', label_fields=['labels']))
-        self.hdf5_dataset_cache = {}
 
     def __getitem__(self, idx):
         image_id = self.labels_df.iloc[idx]['image_id']
         records = self.labels_df[self.labels_df['image_id'] == image_id]
         
-        # Open the HDF5 dataset once and cache it for future use
-        if image_id + ".dicom" not in self.hdf5_dataset_cache:
-            with h5py.File(self.hdf5_path, 'r') as f:
-                self.hdf5_dataset_cache[image_id + ".dicom"] = f[image_id + ".dicom"][()]
-        image_array = self.hdf5_dataset_cache[image_id + ".dicom"]
-        image = Image.fromarray(image_array).convert("RGB")
+        with h5py.File(self.hdf5_path, 'r') as hdf5_file:
+            image_id = self.labels_df.iloc[idx]['image_id']
+            image_data = hdf5_file[image_id + ".dicom"][()]
+        
+        image = Image.fromarray(image_data).convert("RGB")
         image_np = np.array(image)
         
         # Filter out records with 'No finding' or ensure they have default bounding box values
@@ -71,9 +69,3 @@ class ChestXrayDataset(Dataset):
     
     def __len__(self):
         return len(self.labels_df['image_id'].unique())
-
-    def __del__(self):
-        # Close and remove cache of HDF5 datasets
-        for _, hdf5_dataset in self.hdf5_dataset_cache.items():
-            hdf5_dataset.file.close()
-        logging.info("Closed all cached HDF5 datasets.")
