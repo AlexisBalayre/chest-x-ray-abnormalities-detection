@@ -71,21 +71,36 @@ def evaluate_model(model, data_loader, device):
     model.eval()
     all_detections = []
     all_ground_truths = []
-
+    
     with torch.no_grad():
         for images, targets in tqdm(data_loader, desc="Evaluating"):
             images = list(img.to(device) for img in images)
             outputs = model(images)
             
-            for output, target in zip(outputs, targets):
-                scores = output['scores'].cpu().numpy()
-                score_threshold = 0.5
-                predictions = scores >= score_threshold
+            for i, output in enumerate(outputs):
+                # Assuming outputs are already moved to CPU
+                scores = output['scores'].detach().cpu().numpy()
+                pred_labels = output['labels'].detach().cpu().numpy()
+                true_labels = targets[i]['labels'].detach().cpu().numpy()
                 
-                all_detections.extend(output['labels'].cpu().numpy()[predictions])
-                all_ground_truths.extend(target['labels'].cpu().numpy())
+                # Apply a score threshold to filter out low-confidence detections
+                threshold = 0.5
+                valid_indices = scores > threshold
+                valid_scores = scores[valid_indices]
+                valid_pred_labels = pred_labels[valid_indices]
                 
+                # Append detections and ground truths for each image
+                all_detections.extend(valid_pred_labels)
+                all_ground_truths.extend(true_labels)
+    
+    # Handle edge case where no detections are made
+    if not all_detections:
+        print("No detections were made.")
+        return 0
+    
+    # Calculate the average precision score
     average_precision = average_precision_score(all_ground_truths, all_detections, average='macro')
+    
     model.train()
     return average_precision
 
