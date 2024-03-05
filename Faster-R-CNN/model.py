@@ -1,7 +1,7 @@
 import os
 import torch
 import logging
-from torchvision.models.detection import fasterrcnn_resnet50_fpn
+from torchvision.models.detection import fasterrcnn_resnet50_fpn, FasterRCNN_ResNet50_FPN_Weights
 from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
 from torch.utils.data import DataLoader
 from torch.optim import SGD
@@ -29,15 +29,28 @@ config = {
     'checkpoint_dir': './model_checkpoints',  # Ensure this directory exists
 }
 
+def collate_fn(batch):
+    images = [item[0] for item in batch]
+    targets = [item[1] for item in batch]
+
+    # Handle variable-sized bounding boxes or targets here
+    # For example, padding the bounding boxes to match the largest tensor size in the batch
+
+    images = torch.stack(images, 0)
+    # Ensure targets are appropriately handled as well
+
+    return images, targets
+
+
 # Data preparation
 train_dataset = ChestXrayDataset(config['train_csv'], config['hdf5_file'], target_size=(224, 224), phase='train')
 test_dataset = ChestXrayDataset(config['test_csv'], config['hdf5_file'], target_size=(224, 224), phase='test')
 
-train_loader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True, num_workers=4, pin_memory=True)
-test_loader = DataLoader(test_dataset, batch_size=config['batch_size'], shuffle=False, num_workers=4, pin_memory=True)
+train_loader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True, num_workers=4, pin_memory=True, collate_fn=collate_fn)
+test_loader = DataLoader(test_dataset, batch_size=config['batch_size'], shuffle=False, num_workers=4, pin_memory=True, collate_fn=collate_fn)
 
 # Model setup
-model = fasterrcnn_resnet50_fpn(pretrained=True)
+model = fasterrcnn_resnet50_fpn(weights=FasterRCNN_ResNet50_FPN_Weights.DEFAULT)
 in_features = model.roi_heads.box_predictor.cls_score.in_features
 model.roi_heads.box_predictor = FastRCNNPredictor(in_features, config['num_classes'])
 model.to(config['device'])
@@ -80,8 +93,12 @@ best_val_mAP = 0.0
 for epoch in range(config['num_epochs']):
     model.train()
     for images, targets in tqdm(train_loader, desc=f"Epoch {epoch+1}/{config['num_epochs']}"):
-        images = list(img.to(config['device']) for img in images)
-        targets = [{k: v.to(config['device']) for k, v in t.items()} for t in targets]
+        images = [img.to(config['device']) for img in images]
+        targets_converted = []
+        for t in targets:
+            t_converted = {k: torch.tensor(v, device=config['device']) if isinstance(v, np.ndarray) else v.to(config['device']) for k, v in t.items()}
+            targets_converted.append(t_converted)
+        targets = targets_converted
 
         optimizer.zero_grad()
         with autocast():
