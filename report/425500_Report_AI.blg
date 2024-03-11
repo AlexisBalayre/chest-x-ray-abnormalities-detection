@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: 425500_Report_AI.aux
+The style file: CranfieldNumbered.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: CUCitations.bib
+Warning--empty author and editor in GCC
+Warning--missing publisher in GCC
+Warning--empty author and editor in CUDA
+Warning--missing publisher in CUDA
+You've used 5 entries,
+            3506 wiz_defined-function locations,
+            728 strings with 5810 characters,
+and the built_in function-call counts, 8927 in all, are:
+= -- 1039
+> -- 80
+< -- 42
++ -- 38
+- -- 17
+* -- 693
+:= -- 978
+add.period$ -- 19
+call.type$ -- 5
+change.case$ -- 0
+chr.to.int$ -- 95
+cite$ -- 9
+duplicate$ -- 787
+empty$ -- 861
+format.name$ -- 18
+if$ -- 2101
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 48
+newline$ -- 29
+num.names$ -- 5
+pop$ -- 134
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 111
+stack$ -- 0
+substring$ -- 1556
+swap$ -- 122
+text.length$ -- 17
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 4
+while$ -- 44
+width$ -- 6
+write$ -- 63
+(There were 4 warnings)

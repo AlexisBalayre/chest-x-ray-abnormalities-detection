@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{10.1145/3017994}
+Filippone S, Cardellini V, Barbieri D, Fanfarillo A.
+\newblock Sparse Matrix-Vector Multiplication on GPGPUs.
+\newblock ACM Trans Math Softw. 2017 jan;43(4).
+\newblock Available at: \url{https://doi.org/10.1145/3017994}.
+
+\bibitem{Davis2011UFCollection}
+Davis TA, Hu Y.
+\newblock The University of Florida Sparse Matrix Collection.
+\newblock ACM Transactions on Mathematical Software. 2011;38(1):1:1-1:25.
+\newblock Available at: \url{https://sparse.tamu.edu/}. (Accessed: December 28, 2023).
+
+\bibitem{Kolodziej2019SuiteSparseInterface}
+Kolodziej SP, Aznaveh M, Bullock M, David J, Davis TA, Henderson M, et~al.
+\newblock The SuiteSparse Matrix Collection Website Interface.
+\newblock Journal of Open Source Software. 2019;4(35):1244-8.
+\newblock Available at: \url{https://sparse.tamu.edu/}. (Accessed: December 28, 2023).
+
+\bibitem{GCC}
+Foundation FS. The GNU Compiler Collection; 2024.
+\newblock Available at: \url{https://gcc.gnu.org/}. (Accessed: February 1, 2024).
+
+\bibitem{CUDA}
+Corporation N. CUDA Toolkit; 2024.
+\newblock Available at: \url{https://developer.nvidia.com/cuda-toolkit}. (Accessed: February 1, 2024).
+
+\end{thebibliography}
