@@ -1,69 +1,242 @@
-@article{Davis2011UFCollection,
-  author  = {Timothy A. Davis and Yifan Hu},
-  doi     = {10.1145/2049662.2049663},
-  journal = {ACM Transactions on Mathematical Software},
-  note    = {(Accessed: December 28, 2023)},
-  number  = {1},
-  pages   = {1:1--1:25},
-  title   = {The University of Florida Sparse Matrix Collection},
-  url     = {https://sparse.tamu.edu/},
-  volume  = {38},
-  year    = 2011
+@inproceedings{9145130,
+  author    = {Padilla, Rafael and Netto, Sergio L. and da Silva, Eduardo A. B.},
+  booktitle = {2020 International Conference on Systems, Signals and Image Processing (IWSSIP)},
+  doi       = {10.1109/IWSSIP48289.2020.9145130},
+  keywords  = {Measurement;Object detection;Detectors;Interpolation;Tools;Benchmark testing;Standards;object-detection metrics;average precision;object-detection challenges;bounding boxes},
+  number    = {},
+  pages     = {237-242},
+  title     = {A Survey on Performance Metrics for Object-Detection Algorithms},
+  volume    = {},
+  year      = {2020}
 }
 
-@article{Kolodziej2019SuiteSparseInterface,
-  author  = {Scott P. Kolodziej and Mohsen Aznaveh and Matthew Bullock and Jarrett David and Timothy A. Davis and Matthew Henderson and Yifan Hu and Read Sandstrom},
-  doi     = {10.21105/joss.01244},
-  journal = {Journal of Open Source Software},
-  note    = {(Accessed: December 28, 2023)},
-  number  = {35},
-  pages   = {1244--1248},
-  title   = {The SuiteSparse Matrix Collection Website Interface},
-  url     = {https://sparse.tamu.edu/},
-  volume  = {4},
-  year    = 2019
+@article{Amann2020,
+  abstract  = {Explainability is one of the most heavily debated topics when it comes to the application of artificial intelligence (AI) in healthcare. Even though AI-driven systems have been shown to outperform humans in certain analytical tasks, the lack of explainability continues to spark criticism. Yet, explainability is not a purely technological issue, instead it invokes a host of medical, legal, ethical, and societal questions that require thorough exploration. This paper provides a comprehensive assessment of the role of explainability in medical AI and makes an ethical evaluation of what explainability means for the adoption of AI-driven tools into clinical practice.},
+  author    = {Amann, Julia and Blasimme, Alessandro and Vayena, Effy and Frey, Dietmar and Madai, Vince I. and the Precise4Q consortium},
+  doi       = {10.1186/s12911-020-01332-6},
+  journal   = {BMC Medical Informatics and Decision Making},
+  number    = {1},
+  pages     = {310},
+  publisher = {Springer Science and Business Media LLC},
+  title     = {Explainability for artificial intelligence in healthcare: a multidisciplinary perspective},
+  url       = {https://doi.org/10.1186/s12911-020-01332-6},
+  volume    = {20},
+  year      = {2020}
 }
 
-@misc{GCC,
-  author = {Free Software Foundation},
-  note   = {(Accessed: February 1, 2024)},
-  title  = {The GNU Compiler Collection},
-  url    = {https://gcc.gnu.org/},
-  year   = 2024
+@article{bioengineering10070807,
+  abstract       = {Ultrasound imaging is a critical tool for triaging and diagnosing subjects but only if images can be properly interpreted. Unfortunately, in remote or military medicine situations, the expertise to interpret images can be lacking. Machine-learning image interpretation models that are explainable to the end user and deployable in real time with ultrasound equipment have the potential to solve this problem. We have previously shown how a YOLOv3 (You Only Look Once) object detection algorithm can be used for tracking shrapnel, artery, vein, and nerve fiber bundle features in a tissue phantom. However, real-time implementation of an object detection model requires optimizing model inference time. Here, we compare the performance of five different object detection deep-learning models with varying architectures and trainable parameters to determine which model is most suitable for this shrapnel-tracking ultrasound image application. We used a dataset of more than 16,000 ultrasound images from gelatin tissue phantoms containing artery, vein, nerve fiber, and shrapnel features for training and evaluating each model. Every object detection model surpassed 0.85 mean average precision except for the detection transformer model. Overall, the YOLOv7tiny model had the higher mean average precision and quickest inference time, making it the obvious model choice for this ultrasound imaging application. Other object detection models were overfitting the data as was determined by lower testing performance compared with higher training performance. In summary, the YOLOv7tiny object detection model had the best mean average precision and inference time and was selected as optimal for this application. Next steps will implement this object detection algorithm for real-time applications, an important next step in translating AI models for emergency and military medicine.},
+  article-number = {807},
+  author         = {Hernandez-Torres, Sofia I. and Hennessey, Ryan P. and Snider, Eric J.},
+  doi            = {10.3390/bioengineering10070807},
+  issn           = {2306-5354},
+  journal        = {Bioengineering},
+  number         = {7},
+  pubmedid       = {37508834},
+  title          = {Performance Comparison of Object Detection Networks for Shrapnel Identification in Ultrasound Images},
+  url            = {https://www.mdpi.com/2306-5354/10/7/807},
+  volume         = {10},
+  year           = {2023}
 }
 
-@misc{CMake,
-  author = {Kitware, Inc.},
-  note   = {(Accessed: February 1, 2024)},
-  title  = {CMake},
-  url    = {https://cmake.org/},
-  year   = 2024
+@misc{cyclicallr,
+  archiveprefix = {arXiv},
+  author        = {Leslie N. Smith},
+  eprint        = {1506.01186},
+  primaryclass  = {cs.CV},
+  title         = {Cyclical Learning Rates for Training Neural Networks},
+  year          = {2017}
 }
 
-@misc{CUDA,
-  author = {NVIDIA Corporation},
-  note   = {(Accessed: February 1, 2024)},
-  title  = {CUDA Toolkit},
-  url    = {https://developer.nvidia.com/cuda-toolkit},
-  year   = 2024
+@misc{dter,
+  abstract  = {Traditional cell viability judgment methods are invasive and damaging to cells. Moreover, even under a microscope, it is difficult to distinguish live cells from dead cells by the naked eye alone. With the development of optical imaging technology, hyperspectral imaging is more and more widely used in various fields. Hyperspectral imaging is a non-contact optical technique that provides both spectral and spatial information in a single measurement. It becomes a fast, non-invasive option to differentiate between live and dead cells. In recent years, the rapid development of deep learning has provided a better way to distinguish the difference between living and dead cells through a large amount of data. However, it is often necessary to acquire large amounts of labeled data at an expensive cost to train models. This is more difficult to achieve on medical hyperspectral images. Therefore, in this paper, a new model called HSI-DETR is proposed to solve the above problem on the target detection task of live and dead cells, which is based on the detection transformer (DETR) model. The HSI-DETR model suitable for hyperspectral images (HSI) is proposed with minimal modification. Then, some parameters of DETR trained on RGB images are transferred to HSI-DETR trained on hyperspectral images. Compared to the general method, this method can train a better model with a small number of labeled samples. And compared to the DETR-R50, the AP50 of HSI-DETR-R50 has increased by 5.15\%.},
+  address   = {New York, NY, USA},
+  author    = {Ye, Songxin and Li, Nanying and Xue, Jiaqi and Long, Yaqian and Jia, Sen},
+  booktitle = {Proceedings of the 2022 11th International Conference on Computing and Pattern Recognition},
+  doi       = {10.1145/3581807.3581822},
+  isbn      = {9781450397056},
+  location  = {Beijing, China},
+  numpages  = {6},
+  pages     = {102-107},
+  publisher = {Association for Computing Machinery},
+  series    = {ICCPR '22},
+  title     = {HSI-DETR: A DETR-based Transfer Learning from RGB to Hyperspectral Images for Object Detection of Live and Dead Cells: To achieve better results, convert models with the fewest changes from RGB to HSI.},
+  url       = {https://doi.org/10.1145/3581807.3581822},
+  year      = {2023}
 }
 
-@article{10.1145/3017994,
-  abstract   = {The multiplication of a sparse matrix by a dense vector (SpMV) is a centerpiece of scientific computing applications: it is the essential kernel for the solution of sparse linear systems and sparse eigenvalue problems by iterative methods. The efficient implementation of the sparse matrix-vector multiplication is therefore crucial and has been the subject of an immense amount of research, with interest renewed with every major new trend in high-performance computing architectures. The introduction of General-Purpose Graphics Processing Units (GPGPUs) is no exception, and many articles have been devoted to this problem.With this article, we provide a review of the techniques for implementing the SpMV kernel on GPGPUs that have appeared in the literature of the last few years. We discuss the issues and tradeoffs that have been encountered by the various researchers, and a list of solutions, organized in categories according to common features. We also provide a performance comparison across different GPGPU models and on a set of test matrices coming from various application domains.},
-  address    = {New York, NY, USA},
-  articleno  = {30},
-  author     = {Filippone, Salvatore and Cardellini, Valeria and Barbieri, Davide and Fanfarillo, Alessandro},
-  doi        = {10.1145/3017994},
-  issn       = {0098-3500},
-  issue_date = {December 2017},
-  journal    = {ACM Trans. Math. Softw.},
-  keywords   = {GPU programming, Sparse matrices},
-  month      = {jan},
-  number     = {4},
-  numpages   = {49},
-  publisher  = {Association for Computing Machinery},
-  title      = {Sparse Matrix-Vector Multiplication on GPGPUs},
-  url        = {https://doi.org/10.1145/3017994},
-  volume     = {43},
-  year       = {2017}
+@article{electronics10030279,
+  abstract       = {Recent outstanding results of supervised object detection in competitions and challenges are often associated with specific metrics and datasets. The evaluation of such methods applied in different contexts have increased the demand for annotated datasets. Annotation tools represent the location and size of objects in distinct formats, leading to a lack of consensus on the representation. Such a scenario often complicates the comparison of object detection methods. This work alleviates this problem along the following lines: (i) It provides an overview of the most relevant evaluation methods used in object detection competitions, highlighting their peculiarities, differences, and advantages; (ii) it examines the most used annotation formats, showing how different implementations may influence the assessment results; and (iii) it provides a novel open-source toolkit supporting different annotation formats and 15 performance metrics, making it easy for researchers to evaluate the performance of their detection algorithms in most known datasets. In addition, this work proposes a new metric, also included in the toolkit, for evaluating object detection in videos that is based on the spatio-temporal overlap between the ground-truth and detected bounding boxes.},
+  article-number = {279},
+  author         = {Padilla, Rafael and Passos, Wesley L. and Dias, Thadeu L. B. and Netto, Sergio L. and da Silva, Eduardo A. B.},
+  doi            = {10.3390/electronics10030279},
+  issn           = {2079-9292},
+  journal        = {Electronics},
+  number         = {3},
+  title          = {A Comparative Analysis of Object Detection Metrics with a Companion Open-Source Toolkit},
+  url            = {https://www.mdpi.com/2079-9292/10/3/279},
+  volume         = {10},
+  year           = {2021}
+}
+
+@article{Erickson2021,
+  author  = {Erickson, Bradley J. and Kitamura, Felipe},
+  doi     = {10.1148/ryai.2021200126},
+  journal = {Radiology: Artificial Intelligence},
+  number  = {3},
+  pages   = {e200126},
+  title   = {Magician's Corner: 9. Performance Metrics for Machine Learning Models},
+  url     = {https://doi.org/10.1148/ryai.2021200126},
+  volume  = {3},
+  year    = {2021}
+}
+
+@misc{fasterrnn,
+  archiveprefix = {arXiv},
+  author        = {Shaoqing Ren and Kaiming He and Ross Girshick and Jian Sun},
+  eprint        = {1506.01497},
+  primaryclass  = {cs.CV},
+  title         = {Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks},
+  year          = {2016}
+}
+
+@article{healthcare11121684,
+  abstract       = {An international reader study was conducted to gauge an average diagnostic accuracy of radiologists interpreting chest X-ray images, including those from fluorography and mammography, and establish requirements for stand-alone radiological artificial intelligence (AI) models. The retrospective studies in the datasets were labelled as containing or not containing target pathological findings based on a consensus of two experienced radiologists, and the results of a laboratory test and follow-up examination, where applicable. A total of 204 radiologists from 11 countries with various experience performed an assessment of the dataset with a 5-point Likert scale via a web platform. Eight commercial radiological AI models analyzed the same dataset. The AI AUROC was 0.87 (95% CI:0.83–0.9) versus 0.96 (95% CI 0.94–0.97) for radiologists. The sensitivity and specificity of AI versus radiologists were 0.71 (95% CI 0.64–0.78) versus 0.91 (95% CI 0.86–0.95) and 0.93 (95% CI 0.89–0.96) versus 0.9 (95% CI 0.85–0.94) for AI. The overall diagnostic accuracy of radiologists was superior to AI for chest X-ray and mammography. However, the accuracy of AI was noninferior to the least experienced radiologists for mammography and fluorography, and to all radiologists for chest X-ray. Therefore, an AI-based first reading could be recommended to reduce the workload burden of radiologists for the most common radiological studies such as chest X-ray and mammography.},
+  article-number = {1684},
+  author         = {Arzamasov, Kirill and Vasilev, Yuriy and Vladzymyrskyy, Anton and Omelyanskaya, Olga and Shulkin, Igor and Kozikhina, Darya and Goncharova, Inna and Gelezhe, Pavel and Kirpichev, Yury and Bobrovskaya, Tatiana and Andreychenko, Anna},
+  doi            = {10.3390/healthcare11121684},
+  issn           = {2227-9032},
+  journal        = {Healthcare},
+  number         = {12},
+  pubmedid       = {37372802},
+  title          = {An International Non-Inferiority Study for the Benchmarking of AI for Routine Radiology Cases: Chest X-ray, Fluorography and Mammography},
+  url            = {https://www.mdpi.com/2227-9032/11/12/1684},
+  volume         = {11},
+  year           = {2023}
+}
+
+@article{Karargyris2023,
+  abstract  = {Medical artificial intelligence (AI) has tremendous potential to advance healthcare by supporting and contributing to the evidence-based practice of medicine, personalizing patient treatment, reducing costs, and improving both healthcare provider and patient experience. Unlocking this potential requires systematic, quantitative evaluation of the performance of medical AI models on large-scale, heterogeneous data capturing diverse patient populations. Here, to meet this need, we introduce MedPerf, an open platform for benchmarking AI models in the medical domain. MedPerf focuses on enabling federated evaluation of AI models, by securely distributing them to different facilities, such as healthcare organizations. This process of bringing the model to the data empowers each facility to assess and verify the performance of AI models in an efficient and human-supervised process, while prioritizing privacy. We describe the current challenges healthcare and AI communities face, the need for an open platform, the design philosophy of MedPerf, its current implementation status and real-world deployment, our roadmap and, importantly, the use of MedPerf with multiple international institutions within cloud-based technology and on-premises scenarios. Finally, we welcome new contributions by researchers and organizations to further strengthen MedPerf as an open benchmarking platform.},
+  author    = {Karargyris, Alexandros and Umeton, Renato and Sheller, Micah J. and Aristizabal, Alejandro and George, Johnu and Wuest, Anna and Pati, Sarthak and Kassem, Hasan and Zenk, Maximilian and Baid, Ujjwal and Narayana Moorthy, Prakash and Chowdhury, Alexander and Guo, Junyi and Nalawade, Sahil and Rosenthal, Jacob and Kanter, David and Xenochristou, Maria and Beutel, Daniel J. and Chung, Verena and Bergquist, Timothy and Eddy, James and Abid, Abubakar and Tunstall, Lewis and Sanseviero, Omar and Dimitriadis, Dimitrios and Qian, Yiming and Xu, Xinxing and Liu, Yong and Goh, Rick Siow Mong and Bala, Srini and Bittorf, Victor and Puchala, Sreekar Reddy and Ricciuti, Biagio and Samineni, Soujanya and Sengupta, Eshna and Chaudhari, Akshay and Coleman, Cody and Desinghu, Bala and Diamos, Gregory and Dutta, Debo and Feddema, Diane and Fursin, Grigori and Huang, Xinyuan and Kashyap, Satyananda and Lane, Nicholas and Mallick, Indranil and Mascagni, Pietro and Mehta, Virendra and Moraes, Cassiano Ferro and Natarajan, Vivek and Nikolov, Nikola and Padoy, Nicolas and Pekhimenko, Gennady and Reddi, Vijay Janapa and Reina, G. Anthony and Ribalta, Pablo and Singh, Abhishek and Thiagarajan, Jayaraman J. and Albrecht, Jacob and Wolf, Thomas and Miller, Geralyn and Fu, Huazhu and Shah, Prashant and Xu, Daguang and Yadav, Poonam and Talby, David and Awad, Mark M. and Howard, Jeremy P. and Rosenthal, Michael and Marchionni, Luigi and Loda, Massimo and Johnson, Jason M. and Bakas, Spyridon and Mattson, Peter and FeTS Consortium and BraTS-2020 Consortium and AI4SafeChole Consortium},
+  doi       = {10.1038/s42256-023-00652-2},
+  journal   = {Nature Machine Intelligence},
+  number    = {7},
+  pages     = {799--810},
+  publisher = {Nature Publishing Group},
+  title     = {Federated benchmarking of medical artificial intelligence with MedPerf},
+  url       = {https://doi.org/10.1038/s42256-023-00652-2},
+  volume    = {5},
+  year      = {2023}
+}
+
+@article{Mittermaier2023,
+  abstract  = {Artificial intelligence systems are increasingly being applied to healthcare. In surgery, AI applications hold promise as tools to predict surgical outcomes, assess technical skills, or guide surgeons intraoperatively via computer vision. On the other hand, AI systems can also suffer from bias, compounding existing inequities in socioeconomic status, race, ethnicity, religion, gender, disability, or sexual orientation. Bias particularly impacts disadvantaged populations, which can be subject to algorithmic predictions that are less accurate or underestimate the need for care. Thus, strategies for detecting and mitigating bias are pivotal for creating AI technology that is generalizable and fair. Here, we discuss a recent study that developed a new strategy to mitigate bias in surgical AI systems.},
+  author    = {Mittermaier, Mirja and Raza, Marium M. and Kvedar, Joseph C.},
+  doi       = {10.1038/s41746-023-00858-z},
+  journal   = {npj Digital Medicine},
+  number    = {1},
+  pages     = {113},
+  publisher = {Nature Publishing Group},
+  title     = {Bias in AI-based models for medical applications: challenges and mitigation strategies},
+  url       = {https://doi.org/10.1038/s41746-023-00858-z},
+  volume    = {6},
+  year      = {2023}
+}
+
+@article{Murdoch2021,
+  abstract  = {Advances in healthcare artificial intelligence (AI) are occurring rapidly and there is a growing discussion about managing its development. Many AI technologies end up owned and controlled by private entities. The nature of the implementation of AI could mean such corporations, clinics and public bodies will have a greater than typical role in obtaining, utilizing and protecting patient health information. This raises privacy issues relating to implementation and data security.},
+  author    = {Murdoch, Blake},
+  doi       = {10.1186/s12910-021-00687-3},
+  journal   = {BMC Medical Ethics},
+  number    = {1},
+  pages     = {122},
+  publisher = {Springer Science and Business Media LLC},
+  title     = {Privacy and artificial intelligence: challenges for protecting health information in a new era},
+  url       = {https://doi.org/10.1186/s12910-021-00687-3},
+  volume    = {22},
+  year      = {2021}
+}
+
+
+@article{Mustafa2023,
+  abstract = {Our research focused on creating an advanced machine-learning algorithm that accurately detects anomalies in chest X-ray images to provide healthcare professionals with a reliable tool for diagnosing various lung conditions. To achieve this, we analysed a vast collection of X-ray images and utilised sophisticated visual analysis techniques; such as deep learning (DL) algorithms, object recognition, and categorisation models. To create our model, we used a large training dataset of chest X-rays, which provided valuable information for visualising and categorising abnormalities. We also utilised various data augmentation methods; such as scaling, rotation, and imitation; to increase the diversity of images used for training. We adopted the widely used You Only Look Once (YOLO) v8 algorithm, an object recognition paradigm that has demonstrated positive outcomes in computer vision applications, and modified it to classify X-ray images into distinct categories; such as respiratory infections, tuberculosis (TB), and lung nodules. It was particularly effective in identifying unique and crucial outcomes that may, otherwise, be difficult to detect using traditional diagnostic methods. Our findings demonstrate that healthcare practitioners can reliably use machine learning (ML) algorithms to diagnose various lung disorders with greater accuracy and efficiency.},
+  author   = {Mustafa, Zaid and Nsour, Heba},
+  doi      = {10.3390/diagnostics13182979},
+  journal  = {Diagnostics (Basel, Switzerland)},
+  number   = {18},
+  pages    = {2979},
+  pmid     = {37761345},
+  title    = {Using Computer Vision Techniques to Automatically Detect Abnormalities in Chest X-rays},
+  volume   = {13},
+  year     = {2023}
+}
+
+
+@article{Naik2022,
+  abstract = {The legal and ethical issues that confront society due to Artificial Intelligence (AI) include privacy and surveillance, bias or discrimination, and potentially the philosophical challenge is the role of human judgment. Concerns about newer digital technologies becoming a new source of inaccuracy and data breaches have arisen as a result of its use. Mistakes in the procedure or protocol in the field of healthcare can have devastating consequences for the patient who is the victim of the error. Because patients come into contact with physicians at moments in their lives when they are most vulnerable, it is crucial to remember this. Currently, there are no well-defined regulations in place to address the legal and ethical issues that may arise due to the use of artificial intelligence in healthcare settings. This review attempts to address these pertinent issues highlighting the need for algorithmic transparency, privacy, and protection of all the beneficiaries involved and cybersecurity of associated vulnerabilities.},
+  author   = {Naik, Nithesh and Hameed, B.M. Zeeshan and Shetty, Dasharathraj K. and Swain, Dishant and Shah, Milap and Paul, Rahul and Aggarwal, Kaivalya and Ibrahim, Sufyan and Patil, Vathsala and Smriti, Komal and Shetty, Suyog and Rai, Bhavan Prasad and Chlosta, Piotr and Somani, Bhaskar K.},
+  doi      = {10.3389/fsurg.2022.862322},
+  journal  = {Frontiers in surgery},
+  pages    = {862322},
+  pmid     = {35360424},
+  title    = {Legal and Ethical Consideration in Artificial Intelligence in Healthcare: Who Takes Responsibility?},
+  volume   = {9},
+  year     = {2022}
+}
+
+
+
+@article{Nazer2023,
+  abstract = {The adoption of artificial intelligence (AI) algorithms is rapidly increasing in healthcare. Such algorithms may be shaped by various factors such as social determinants of health that can influence health outcomes. While AI algorithms have been proposed as a tool to expand the reach of quality healthcare to underserved communities and improve health equity, recent literature has raised concerns about the propagation of biases and healthcare disparities through implementation of these algorithms. Thus, it is critical to understand the sources of bias inherent in AI-based algorithms. This review aims to highlight the potential sources of bias within each step of developing AI algorithms in healthcare, starting from framing the problem, data collection, preprocessing, development, and validation, as well as their full implementation. For each of these steps, we also discuss strategies to mitigate the bias and disparities. A checklist was developed with recommendations for reducing bias during the development and implementation stages. It is important for developers and users of AI-based algorithms to keep these important considerations in mind to advance health equity for all populations.},
+  author   = {Nazer, Lama H. and Zatarah, Razan and Waldrip, Shai and Ke, Janny Xue Chen and Moukheiber, Mira and Khanna, Ashish K. and Hicklen, Rachel S. and Moukheiber, Lama and Moukheiber, Dana and Ma, Haobo and Mathur, Piyush},
+  doi      = {10.1371/journal.pdig.0000278},
+  journal  = {PLOS digital health},
+  number   = {6},
+  pages    = {e0000278},
+  pmid     = {37347721},
+  title    = {Bias in artificial intelligence algorithms and recommendations for mitigation},
+  volume   = {2},
+  year     = {2023}
+}
+
+@misc{nms,
+  archiveprefix = {arXiv},
+  author        = {Jeffrey Ouyang-Zhang and Jang Hyun Cho and Xingyi Zhou and Philipp Krähenbühl},
+  eprint        = {2212.06137},
+  primaryclass  = {cs.CV},
+  title         = {NMS Strikes Back},
+  year          = {2022}
+}
+
+@misc{rajpurkar2017chexnet,
+  archiveprefix = {arXiv},
+  author        = {Pranav Rajpurkar and Jeremy Irvin and Kaylie Zhu and Brandon Yang and Hershel Mehta and Tony Duan and Daisy Ding and Aarti Bagul and Curtis Langlotz and Katie Shpanskaya and Matthew P. Lungren and Andrew Y. Ng},
+  eprint        = {1711.05225},
+  primaryclass  = {cs.CV},
+  title         = {CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning},
+  year          = {2017}
+}
+
+@article{Shou2022,
+  abstract = {The object detection task in the medical field is challenging in terms of classification and regression. Due to its crucial applications in computer-aided diagnosis and computer-aided detection techniques, an increasing number of researchers are transferring the object detection techniques to the medical field. However, in existing work on object detection, researchers do not consider the low resolution of medical images, the high amount of noise, and the small size of the objects to be detected. Based on this, this paper proposes a new algorithmic model called the MS Transformer, where a self-supervised learning approach is used to perform a random mask on the input image to reconstruct the input features, learn a richer feature vector, and filter out excessive noise. To focus the model on the small objects that are being detected, the hierarchical transformer model is introduced in this paper, and a sliding window with a local self-attention mechanism is used to give a higher attention score to the small objects to be detected. Finally, a single-stage object detection framework is used to predict the sequence of sets at the location of the bounding box and the class of objects to be detected. On the DeepLesion and BCDD benchmark dataset, the model proposed in this paper achieves better performance improvement on multiple evaluation metric categories.},
+  author   = {Shou, Yuntao and Meng, Tao and Ai, Wei and Xie, Canhao and Liu, Haiyan and Wang, Yina},
+  doi      = {10.1155/2022/5863782},
+  journal  = {Computational intelligence and neuroscience},
+  pages    = {5863782},
+  pmid     = {35965770},
+  title    = {Object Detection in Medical Images Based on Hierarchical Transformer and Mask Mechanism},
+  volume   = {2022},
+  year     = {2022}
+}
+
+@article{Yang2021,
+  abstract = {In the era of digital medicine, a vast number of medical images are produced every day. There is a great demand for intelligent equipment for adjuvant diagnosis to assist medical doctors with different disciplines. With the development of artificial intelligence, the algorithms of convolutional neural network (CNN) progressed rapidly. CNN and its extension algorithms play important roles on medical imaging classification, object detection, and semantic segmentation. While medical imaging classification has been widely reported, the object detection and semantic segmentation of imaging are rarely described. In this review article, we introduce the progression of object detection and semantic segmentation in medical imaging study. We also discuss how to accurately define the location and boundary of diseases.},
+  author   = {Yang, Ruixin and Yu, Yingyan},
+  doi      = {10.3389/fonc.2021.638182},
+  journal  = {Frontiers in oncology},
+  pages    = {638182},
+  pmid     = {33768000},
+  title    = {Artificial Convolutional Neural Network in Object Detection and Semantic Segmentation for Medical Imaging Analysis},
+  volume   = {11},
+  year     = {2021}
 }

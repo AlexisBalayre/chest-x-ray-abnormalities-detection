@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.14)  6 MAR 2024 12:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.14)  12 MAR 2024 13:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -701,7 +701,7 @@ Package hyperref Info: Link coloring OFF on input line 102.
 \@outlinefile=\write3
 \openout3 = `425500_Report_AI.out'.
 
-<CULogo.png, id=48, 125.268pt x 125.268pt>
+<CULogo.png, id=52, 125.268pt x 125.268pt>
 File: CULogo.png Graphic file (type png)
 <use CULogo.png>
 Package pdftex.def Info: CULogo.png  used on input line 107.
@@ -737,256 +737,290 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 
 ] (./425500_Report_AI.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
  [3
 
 
-])
+] [4])
 \tf@toc=\write4
 \openout4 = `425500_Report_AI.toc'.
 
- [4] (./425500_Report_AI.lof)
+ [5] (./425500_Report_AI.lof)
 \tf@lof=\write5
 \openout5 = `425500_Report_AI.lof'.
 
- [5
+ [6
 
 
-] (./425500_Report_AI.lot)
+] (./425500_Report_AI.lot
+
+Package natbib Warning: Citation `10.1145/3017994' on page vii undefined on input line 5.
+
+)
 \tf@lot=\write6
 \openout6 = `425500_Report_AI.lot'.
 
- [6
+ [7
 
 ]
 Chapter 1.
 [1
 
 
-]
+] [2]
 Chapter 2.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 223.
+[3
+
+] [4]
+Chapter 3.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 303.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [2
+) [5
 
 ]
 
-LaTeX Warning: Reference `appendix:data-structures' on page 3 undefined on input line 229.
+LaTeX Warning: Reference `appendix:data-structures' on page 6 undefined on input line 309.
 
 
-LaTeX Warning: Reference `appendix:data-structures' on page 3 undefined on input line 247.
+LaTeX Warning: Reference `appendix:data-structures' on page 6 undefined on input line 327.
 
 
-LaTeX Warning: Reference `appendix:data-structures' on page 3 undefined on input line 259.
+LaTeX Warning: Reference `appendix:data-structures' on page 6 undefined on input line 339.
 
-[3]
+[6]
 
-LaTeX Warning: Reference `appendix:crs-sequential' on page 4 undefined on input line 269.
+LaTeX Warning: Reference `appendix:crs-sequential' on page 7 undefined on input line 349.
 
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 275.
-[4] [5]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 355.
+[7] [8]
 
-LaTeX Warning: Reference `appendix:ellpack-sequential' on page 6 undefined on input line 332.
+LaTeX Warning: Reference `appendix:ellpack-sequential' on page 9 undefined on input line 412.
 
-[6] [7]
+[9] [10]
 
-LaTeX Warning: Reference `appendix:openmp' on page 8 undefined on input line 404.
+LaTeX Warning: Reference `appendix:openmp' on page 11 undefined on input line 484.
 
 
-Overfull \hbox (9.31679pt too wide) in paragraph at lines 399--405
+Overfull \hbox (9.31679pt too wide) in paragraph at lines 479--485
 []\OT1/ptm/m/n/12 OpenMP pro-vides a pow-er-ful frame-work for par-al-lelis-ing com-pu-ta-tional tasks in shared-
  []
 
 
-LaTeX Warning: Reference `appendix:crs-openmp' on page 8 undefined on input line 417.
+LaTeX Warning: Reference `appendix:crs-openmp' on page 11 undefined on input line 497.
 
 
-LaTeX Warning: Reference `appendix:ellpack-openmp' on page 8 undefined on input line 418.
+LaTeX Warning: Reference `appendix:ellpack-openmp' on page 11 undefined on input line 498.
 
-[8]
-Overfull \hbox (2.23944pt too wide) in paragraph at lines 436--437
+[11]
+Overfull \hbox (2.23944pt too wide) in paragraph at lines 516--517
 []\OT1/ptm/b/n/12 Efficient Work-load Dis-tri-bu-tion: \OT1/ptm/m/n/12 The abil-ity to dy-nam-i-cally sched-ule work among
  []
 
-[9]
+[12]
 
-LaTeX Warning: Reference `appendix:cuda' on page 10 undefined on input line 462.
-
-
-LaTeX Warning: Reference `appendix:crs-cuda' on page 10 undefined on input line 474.
+LaTeX Warning: Reference `appendix:cuda' on page 13 undefined on input line 542.
 
 
-LaTeX Warning: Reference `appendix:ellpack-cuda' on page 10 undefined on input line 475.
+LaTeX Warning: Reference `appendix:crs-cuda' on page 13 undefined on input line 554.
 
 
-Overfull \hbox (11.79207pt too wide) in paragraph at lines 475--476
+LaTeX Warning: Reference `appendix:ellpack-cuda' on page 13 undefined on input line 555.
+
+
+Overfull \hbox (11.79207pt too wide) in paragraph at lines 555--556
 []\OT1/ptm/m/it/12 ELLPACK Ker-nel: \OT1/ptm/m/n/12 Sim-i-larly, pro-cesses the ma-trix in ELL-PACK for-mat. Threads
  []
 
-[10] [11]
+[13] [14]
 
-LaTeX Warning: Reference `appendix:openmp-main' on page 12 undefined on input line 515.
-
-
-LaTeX Warning: Reference `appendix:cuda-main' on page 12 undefined on input line 516.
+LaTeX Warning: Reference `appendix:openmp-main' on page 15 undefined on input line 595.
 
 
-Overfull \hbox (0.94266pt too wide) in paragraph at lines 528--530
+LaTeX Warning: Reference `appendix:cuda-main' on page 15 undefined on input line 596.
+
+
+Package natbib Warning: Citation `Davis2011UFCollection' on page 15 undefined on input line 605.
+
+
+Package natbib Warning: Citation `Kolodziej2019SuiteSparseInterface' on page 15 undefined on input line 605.
+
+
+Overfull \hbox (0.94266pt too wide) in paragraph at lines 608--610
 []\OT1/ptm/m/n/12 Perform matrix-vector mul-ti-pli-ca-tions us-ing both se-quen-tial and par-al-lel al-go-rithms. 
  []
 
-[12]
-Overfull \hbox (0.50673pt too wide) in paragraph at lines 592--626
+[15]
+Overfull \hbox (0.50673pt too wide) in paragraph at lines 672--706
  [][] 
  []
 
-[13] [14]
-Chapter 3.
-[15
 
-] [16]
-
-LaTeX Warning: Reference `fig:openmpchunksizecrs' on page 17 undefined on input line 696.
+Package natbib Warning: Citation `10.1145/3017994' on page 16 undefined on input line 706.
 
 
-LaTeX Warning: Reference `fig:openmpchunksizellpack' on page 17 undefined on input line 697.
+Package natbib Warning: Citation `10.1145/3017994' on page 16 undefined on input line 706.
 
-
-LaTeX Warning: Reference `fig:openmpthreadscrs' on page 17 undefined on input line 704.
-
-
-LaTeX Warning: Reference `fig:openmpthreadsellpack' on page 17 undefined on input line 705.
-
-[17] [18] [19]
-
-LaTeX Warning: Reference `fig:cudaxblocksizecrs' on page 20 undefined on input line 784.
-
-
-LaTeX Warning: Reference `fig:cudaxblocksizeellpack' on page 20 undefined on input line 785.
-
-
-LaTeX Warning: Reference `fig:cudayblocksizecrs' on page 20 undefined on input line 793.
-
-
-LaTeX Warning: Reference `fig:cudayblocksizeellpack' on page 20 undefined on input line 794.
-
-[20]
-Overfull \hbox (5.02553pt too wide) in alignment at lines 870--876
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (5.02553pt too wide) in alignment at lines 876--880
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (5.02553pt too wide) in alignment at lines 880--882
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (5.02553pt too wide) in alignment at lines 882--913
- [] [] [] [] [] [] 
- []
-
-[21] [22] [23]
+[16] [17]
 Chapter 4.
-(./425500_Report_AI.bbl [24
+[18
 
-]) [25
+] [19]
+
+LaTeX Warning: Reference `fig:openmpchunksizecrs' on page 20 undefined on input line 776.
+
+
+LaTeX Warning: Reference `fig:openmpchunksizellpack' on page 20 undefined on input line 777.
+
+
+LaTeX Warning: Reference `fig:openmpthreadscrs' on page 20 undefined on input line 784.
+
+
+LaTeX Warning: Reference `fig:openmpthreadsellpack' on page 20 undefined on input line 785.
+
+[20] [21] [22]
+
+LaTeX Warning: Reference `fig:cudaxblocksizecrs' on page 23 undefined on input line 862.
+
+
+LaTeX Warning: Reference `fig:cudaxblocksizeellpack' on page 23 undefined on input line 863.
+
+
+LaTeX Warning: Reference `fig:cudayblocksizecrs' on page 23 undefined on input line 870.
+
+
+LaTeX Warning: Reference `fig:cudayblocksizeellpack' on page 23 undefined on input line 871.
+
+[23]
+Overfull \hbox (5.02553pt too wide) in alignment at lines 943--949
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (5.02553pt too wide) in alignment at lines 949--953
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (5.02553pt too wide) in alignment at lines 953--955
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (5.02553pt too wide) in alignment at lines 955--986
+ [] [] [] [] [] [] 
+ []
+
+[24] [25] [26]
+Chapter 5.
+(./425500_Report_AI.bbl [27
+
+]
+
+Package natbib Warning: Empty `thebibliography' environment on input line 3.
+
+) [28
 
 ]
 Appendix A.
-[26
+[29
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1028--1029
+
+Package natbib Warning: Citation `GCC' on page 30 undefined on input line 1087.
+
+
+Package natbib Warning: Citation `CUDA' on page 30 undefined on input line 1088.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1038
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1050
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1058--1059
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
 
  []
 
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 1069--1070
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 1142--1143
 
  []
 
 
-Overfull \hbox (12.50809pt too wide) in paragraph at lines 1081--1082
+Overfull \hbox (12.50809pt too wide) in paragraph at lines 1154--1155
 []\OT1/ptm/b/n/12 Description: \OT1/ptm/m/n/12 Per-form the matrix-vector mul-ti-pli-ca-tion in the CRS for-mat us-ing OpenMP 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1081--1082
+Underfull \hbox (badness 10000) in paragraph at lines 1154--1155
 
  []
 
 
-Overfull \hbox (2.69229pt too wide) in paragraph at lines 1095--1096
+Overfull \hbox (2.69229pt too wide) in paragraph at lines 1168--1169
 []\OT1/ptm/b/n/12 Description: \OT1/ptm/m/n/12 Per-form the matrix-vector mul-ti-pli-ca-tion in the CRS for-mat us-ing CUDA 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1096
+Underfull \hbox (badness 10000) in paragraph at lines 1168--1169
 
  []
 
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 1109--1110
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1121--1122
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1182--1183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1135--1136
+Underfull \hbox (badness 10000) in paragraph at lines 1194--1195
 
  []
 
-[29] [30]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1208--1209
+
+ []
+
+[32] [33]
 Appendix B.
-[31
+
+Package natbib Warning: There were undefined citations.
+
+[34
 
 ] (./425500_Report_AI.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `425500_Report_AI.out' has not changed.
-(rerunfilecheck)             Checksum: 607D2A3C1F802120029044E44B666C81;1307.
+(rerunfilecheck)             Checksum: 92398E62561F0B7644BF16EAB9871E9A;1452.
  ) 
 Here is how much of TeX's memory you used:
  18773 strings out of 476025
- 312443 string characters out of 5790016
+ 312262 string characters out of 5790016
  1914388 words of memory out of 5000000
- 38694 multiletter control sequences out of 15000+600000
+ 38680 multiletter control sequences out of 15000+600000
  548173 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,12n,117p,471b,1161s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 425500_Report_AI.pdf (37 pages, 198179 bytes).
+Output written on 425500_Report_AI.pdf (41 pages, 200748 bytes).
 PDF statistics:
- 538 PDF objects out of 1000 (max. 8388607)
- 475 compressed objects within 5 object streams
- 196 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 570 PDF objects out of 1000 (max. 8388607)
+ 503 compressed objects within 6 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 102 words of extra memory for PDF output out of 10000 (max. 10000000)
 

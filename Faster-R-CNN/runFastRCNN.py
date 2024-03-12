@@ -1,6 +1,5 @@
 import torch
 import lightning as L
-from lightning.pytorch.tuner import Tuner
 from lightning.pytorch.callbacks.early_stopping import EarlyStopping
 
 from ChestXrayDataModule import ChestXrayDataModule
@@ -12,15 +11,9 @@ if __name__ == "__main__":
 
     torch.manual_seed(123)
 
-    train_df_path = (
-        "/mnt/beegfs/home/s425500/chest-x-ray-abnormalities-detection/data/train.csv"
-    )
-    val_df_path = (
-        "/mnt/beegfs/home/s425500/chest-x-ray-abnormalities-detection/data/val.csv"
-    )
-    test_df_path = (
-        "/mnt/beegfs/home/s425500/chest-x-ray-abnormalities-detection/data/test.csv"
-    )
+    train_df_path = "/mnt/beegfs/home/s425500/chest-x-ray-abnormalities-detection/data/train.csv"
+    val_df_path = "/mnt/beegfs/home/s425500/chest-x-ray-abnormalities-detection/data/val.csv"
+    test_df_path = "/mnt/beegfs/home/s425500/chest-x-ray-abnormalities-detection/data/test.csv"
     hdf5_path = "/mnt/beegfs/home/s425500/chest-x-ray-abnormalities-detection/dicom_images_final.hdf5"
 
     dataModule = ChestXrayDataModule(
@@ -30,22 +23,28 @@ if __name__ == "__main__":
         hdf5_path=hdf5_path,
         batch_size=8,
         num_workers=8,
+        target_size=(1024, 1024)
     )
 
-    model = ChestXrayLightningModel(learning_rate=0.002, num_classes=15)
+    dataModule.setup("fit")
+    
+    num_epochs = 20     
+    num_steps = num_epochs * len(dataModule.train_dataset) // dataModule.batch_size
+
+    model = ChestXrayLightningModel(
+        learning_rate=3e-3,
+        num_classes=15,
+        cosine_t_max=num_steps
+    )
 
     trainer = L.Trainer(
-        max_epochs=20,
+        max_epochs=num_steps,
         accelerator="gpu",
         devices="auto",
         deterministic=True,
-        callbacks=[EarlyStopping(monitor="val_map", mode="max")],
+        callbacks=[EarlyStopping(monitor="train_loss", mode="min")]
     )
 
-    tuner = Tuner(trainer=trainer)
-
-    tuner.lr_find(model, datamodule=dataModule, min_lr=1e-6, max_lr=1e-2, num_training=100)
-
     model.train()
-    dataModule.setup("fit")
+ 
     trainer.fit(model, datamodule=dataModule)

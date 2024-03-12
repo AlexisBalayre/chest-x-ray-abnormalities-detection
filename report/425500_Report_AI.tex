@@ -160,24 +160,104 @@
 \fancyhead[R]{\nouppercase{\rightmark}}
 
 \chapter{Introduction}
-High Performance Computing (HPC) is essential for tackling complex
-computational challenges, using supercomputers and server clusters to run
-advanced numerical simulations. At Cranfield University, the CRESCENT2 HPC
-system features a dedicated configuration for research and teaching, with Intel
-Xeon E5 2620 processors and an architecture optimised for parallelism.
 
-This report focuses on improving the performance of multiplying hollow matrices
-by fat vectors, a crucial operation in numerical linear algebra. Exploiting
-CUDA and OpenMP technologies, the study aims to explore shared-memory parallel
-programming strategies on CRESCENT2, using CSR and ELLPACK formats to assess
-their impact on computational efficiency.
+Accurately diagnosing thoracic abnormalities from radiographs (X-rays)
+represents a considerable challenge, even for experienced radiologists. The
+complexity and critical nature of diagnosing these anomalies requires
+increasingly sophisticated decision support tools. In this context, the
+competition organised by Vingroup's Big Data Institute, supported by Vingroup
+JSC and launched in August 2018, aims to promote fundamental research in data
+science and artificial intelligence, with a particular focus on medical image
+processing.
 
-The aim is to make full use of hardware resources, in particular Intel Xeon
-processors and Nvidia GPUs, to identify the most efficient optimisation methods
-depending on the characteristics of the matrices being processed. This will
-lead to the identification of optimal strategies for accelerating computations
-in numerical linear algebra, offering improved prospects for the scientific and
-engineering applications that depend on these operations.
+The main objective of the competition is to develop automated systems capable
+of locating and classifying 14 types of thoracic anomalies from chest X-ray
+images.This initiative underlines the need for greater precision in medical
+diagnosis, where current methods struggle in particular to specify the location
+of findings on X-ray images, potentially leading to incorrect diagnoses.
+
+\section{Dataset}
+
+The dataset provided to participants includes 18,000 annotated chest scans, of
+which 15,000 images are for training and 3,000 for evaluation. These
+annotations were carefully collected via VinBigData's VinLab platform from
+de-identified studies provided by two Vietnamese hospitals.
+
+\section{Significance of the Competition}
+
+This competition promises significant advances in medical diagnosis by
+potentially providing radiologists with a reliable secondary opinion. By
+automating the detection and location of chest X-ray findings, the solution
+aims to lighten the workload of healthcare professionals and improve diagnostic
+accuracy for patients, particularly benefiting those in resource-limited
+settings.
+
+\section{Evaluation Metric}
+
+The competition uses the PASCAL VOC 2010 Mean Average Precision (mAP) metric
+with an Intersection on Union (IoU) threshold of >0.4 to evaluate submissions.
+This metric highlights the importance of accuracy in the detection and
+classification process.
+
+\chapter{literature Review}
+
+Object detection is a fundamental task in computer vision that involves
+identifying and locating objects of different categories in an image or video.
+Unlike image classification, which assigns a label to the entire image, object
+detection aims to provide a label and bounding box for each object of interest
+in the image.
+
+\section{Basic principles}
+
+Object detection generally involves two main tasks: object classification
+(knowing what objects are) and object localisation (knowing where objects are).
+To be successful, an object detection system must be able to recognise objects
+under a variety of conditions, such as different sizes, viewing angles, and
+occlusion levels.
+
+\section{Object Detection Technologies}
+
+\subsection{Convolutional Neural Networks (CNN)}
+
+CNNs are at the heart of many advances in object detection. They are
+particularly effective at extracting hierarchical features from images thanks
+to their layered structure, which includes convolutional layers, pooling layers
+and fully connected layers.
+
+\subsection{Region-based approaches}
+
+\subsubsection{R-CNN}
+
+R-CNN (Regions with CNN features) uses proposed regions to identify potentially
+interesting parts of the image, then applies a CNN to each of these proposed
+regions to classify the objects.
+
+\subsubsection{Fast R-CNN}
+
+Fast R-CNN improves on R-CNN by using a more efficient architecture that shares
+convolution calculations across the entire image, reducing processing time.
+
+\subsubsection{Faster R-CNN}
+
+Faster R-CNN introduces a Region Proposal Network (RPN) that generates region
+proposals directly from image features, further improving detection speed and
+accuracy.
+
+\subsection{Single Processing Methods}
+
+\subsubsection{YOLO (You Only Look Once)}
+
+YOLO divides the image into a grid and predicts bounding boxes and class
+probabilities for each grid cell in a single pass, offering high processing
+speed.
+
+\subsubsection{SSD (Single Shot MultiBox Detector)}
+
+SSD combines the advantages of region-based approaches and single-shot methods,
+using bounding boxes at different scales and aspect ratios to predict the
+presence of objects in the image.
+
+\section{Ethical Considerations}
 
 \chapter{Methodology}
 
@@ -709,7 +789,6 @@ starts to stagnate due to the overhead of managing the threads.
 
 \subsubsection{Performance Comparison}
 
-
 %TC:ignore 
 \begin{longtable}{lcccr}
     \caption{CRS vs ELLPACK using OpenMP}                                                            \\
@@ -780,7 +859,6 @@ in processing large workloads under OpenMP.
 
 \subsubsection{X Block Size Analysis}
 
-
 As shown in Figures~\ref{fig:cudaxblocksizecrs},
 \ref{fig:cudaxblocksizeellpack}, the performance of the CUDA parallel
 algorithms is influenced by the X block size. For the CRS format, the optimal X
@@ -789,7 +867,6 @@ block size is 16 or even 8 for some matrices with higher density.
 
 \subsubsection{Y Block Size Analysis}
 
-
 As shown in Figures~\ref{fig:cudayblocksizecrs} and
 \ref{fig:cudayblocksizeellpack}, the performance of the CUDA parallel
 algorithms is influenced by the Y block size. For the CRS format, the optimal Y
@@ -797,10 +874,6 @@ block size is 16 for most matrices, while for the ELLPACK format, the optimal Y
 block size is 16 or 4 for some matrices with higher density.
 
 \subsubsection{Performance Comparison}
-
-
-
-
 
 \newpage
 %TC:ignore 
