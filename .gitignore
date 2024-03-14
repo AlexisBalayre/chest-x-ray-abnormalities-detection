@@ -1,2 +1,5 @@
 chest-x-ray-abnormalities-detection/
 .DS_Store
+
+# Models 
+models/
