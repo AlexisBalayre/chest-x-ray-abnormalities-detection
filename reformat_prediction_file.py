@@ -1,9 +1,9 @@
 import csv
 
 # Nom du fichier CSV d'entrée
-input_csv_file = "/Users/alexis/Cranfield/AI/assignment/Faster-R-CNN/test_predictions.csv"
+input_csv_file = "/Users/alexis/Cranfield/AI/assignment/models/Faster-R-CNN/test_predictions.csv"
 # Nom du fichier CSV de sortie
-output_csv_file = "/Users/alexis/Cranfield/AI/assignment/Faster-R-CNN/test_predictions_reformatted.csv"
+output_csv_file = "/Users/alexis/Cranfield/AI/assignment/models/Faster-R-CNN/test_predictions_reformatted.csv"
 
 if __name__ == "__main__":
     # Ouvrir le fichier CSV d'entrée pour lire les données
