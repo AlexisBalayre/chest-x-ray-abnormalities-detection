@@ -408,6 +408,13 @@ def extract_fourier_features(image, visualize=False):
 
 
 def extract_frequency_features(image):
+    """
+    Extract frequency domain features using wavelet and Fourier transforms.
+    Parameters:
+        - image: 2D numpy array, preprocessed image.
+    Returns:
+        - Dictionary of frequency domain features.
+    """
     wavelet_features = extract_wavelet_features(image, visualize=False)
     fourier_features = extract_fourier_features(image, visualize=False)
 
@@ -422,6 +429,15 @@ def extract_frequency_features(image):
 
 
 def extract_pixels_features(image):
+    """
+    Extracts all features from a given image.
+
+    Args:
+        image (np.array): 2D numpy array representing the image.
+
+    Returns:
+        dict: A dictionary containing all extracted features.
+    """
     intensity_features = extract_intensity_features(image)
     texture_features = extract_texture_features(image)
     edges_features = extract_edges_features(image)
@@ -438,6 +454,16 @@ def extract_pixels_features(image):
 
 
 def process_file(hdf5_path, filename):
+    """
+    Processes a single file from an HDF5 dataset to extract features.
+
+    Parameters:
+    - hdf5_path (str): Path to the HDF5 file.
+    - filename (str): Name of the dataset within the HDF5 file to process.
+
+    Returns:
+    - dict or None: Extracted features in a dictionary, or None if the dataset is not found.
+    """
     with h5py.File(hdf5_path, "r") as f:
         if filename in f:
             pixel_array = f[filename][:]
@@ -448,6 +474,13 @@ def process_file(hdf5_path, filename):
 
 
 def check_csv_header(csv_path, fieldnames):
+    """
+    Checks and writes a CSV header if necessary.
+
+    Parameters:
+    - csv_path (str): Path to the CSV file.
+    - fieldnames (list of str): List of field names for the CSV header.
+    """
     if not os.path.isfile(csv_path) or os.stat(csv_path).st_size == 0:
         with open(csv_path, mode="w", newline="") as csv_file:
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -455,7 +488,13 @@ def check_csv_header(csv_path, fieldnames):
 
 
 def save_batch_to_csv(csv_path, batch_data):
-    # Append mode without writing headers every time
+    """
+    Saves a batch of extracted features to a CSV file.
+
+    Parameters:
+    - csv_path (str): Path to the CSV file.
+    - batch_data (list of dict): The batch of features to save.
+    """
     with open(csv_path, mode="a", newline="") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=batch_data[0].keys())
         writer.writerows(batch_data)
@@ -463,7 +502,14 @@ def save_batch_to_csv(csv_path, batch_data):
 
 def process_batch(hdf5_path, file_batch):
     """
-    Processes a batch of files, extracting features for each.
+    Processes a batch of files for feature extraction.
+
+    Parameters:
+    - hdf5_path (str): Path to the HDF5 file.
+    - file_batch (list of str): List of file names to process.
+
+    Returns:
+    - list of dict: A list of dictionaries containing extracted features for each file.
     """
     features_list = []
     with h5py.File(hdf5_path, "r") as f:
@@ -477,6 +523,13 @@ def process_batch(hdf5_path, file_batch):
 
 
 def extract_images_features(hdf5_path, csv_path):
+    """
+    Main function to extract features from all images in an HDF5 dataset and save to CSV.
+
+    Parameters:
+    - hdf5_path (str): Path to the HDF5 file.
+    - csv_path (str): Path to the output CSV file.
+    """
     with h5py.File(hdf5_path, "r") as f:
         hdf5_keys = list(f.keys())
 
@@ -498,4 +551,3 @@ def extract_images_features(hdf5_path, csv_path):
                 batch_data = future.result()
                 save_batch_to_csv(csv_path, batch_data)
                 pbar.update(len(batch_data))
-

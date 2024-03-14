@@ -1,17 +1,14 @@
 # Fdb version 4
-["bibtex 425500_Report_AI"] 1710442546 "425500_Report_AI.aux" "425500_Report_AI.bbl" "425500_Report_AI" 1710442548 0
+["bibtex 425500_Report_AI"] 1710282991 "425500_Report_AI.aux" "425500_Report_AI.bbl" "425500_Report_AI" 1710283009 0
   "./CUCitations.bib" 1710248552 26236 e4c00422b1d9339a901af008d4011714 ""
   "./CranfieldNumbered.bst" 1709728370 40883 e68dccfb69fb01c9688750392ebeb179 ""
-  "425500_Report_AI.aux" 1710442547 12514 9dcf56c55af15cfb2ab524172aa818a8 "pdflatex"
+  "425500_Report_AI.aux" 1710283009 10907 a93de48b0f54384c6d8d230a23580e07 "pdflatex"
   (generated)
   "425500_Report_AI.bbl"
   "425500_Report_AI.blg"
   (rewritten before read)
-["pdflatex"] 1710442546 "/Users/alexis/Cranfield/AI/assignment/report/425500_Report_AI.tex" "425500_Report_AI.pdf" "425500_Report_AI" 1710442548 0
-  "../results/annotations_per_class.png" 1710440049 123773 c98e82696f358021a9901a1610be1602 ""
-  "../results/annotations_per_rad.png" 1710440076 132078 f13e61d1a91fb2cf2ad3c9d720e120e5 ""
-  "../results/annotations_per_rad_class.png" 1710440121 38457 6d6e845a1e10ceeb6f1cf4bc6df59860 ""
-  "/Users/alexis/Cranfield/AI/assignment/report/425500_Report_AI.tex" 1710442546 42309 28c4a27abbc19bad7423814bb7d90e9a ""
+["pdflatex"] 1710283008 "/Users/alexis/Cranfield/AI/assignment/report/425500_Report_AI.tex" "425500_Report_AI.pdf" "425500_Report_AI" 1710283009 0
+  "/Users/alexis/Cranfield/AI/assignment/report/425500_Report_AI.tex" 1710283008 41426 ce5ee9e7279ca332adb117cf4626bcda ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -159,13 +156,13 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1699977258 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1699977188 7883458 0fc50070f6972b3c0ed45389126cac27 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "425500_Report_AI.aux" 1710442547 12514 9dcf56c55af15cfb2ab524172aa818a8 "pdflatex"
-  "425500_Report_AI.bbl" 1710442546 49 0eba253fc001332e731e8aba3f23127b "bibtex 425500_Report_AI"
-  "425500_Report_AI.lof" 1710442547 538 e16ee2c5a700cd8d76e76195adfef2b2 "pdflatex"
-  "425500_Report_AI.lot" 1710442547 624 58e895694ccb8c2b30d12ebd867bd384 "pdflatex"
-  "425500_Report_AI.out" 1710442547 1452 707d0f08a844724e1e63d82d00a39f7a "pdflatex"
-  "425500_Report_AI.tex" 1710442546 42309 28c4a27abbc19bad7423814bb7d90e9a ""
-  "425500_Report_AI.toc" 1710442547 5975 ff7c83225f1146da5e6dbec1f6c00d22 "pdflatex"
+  "425500_Report_AI.aux" 1710283009 10907 a93de48b0f54384c6d8d230a23580e07 "pdflatex"
+  "425500_Report_AI.bbl" 1710282991 49 0eba253fc001332e731e8aba3f23127b "bibtex 425500_Report_AI"
+  "425500_Report_AI.lof" 1710283009 160 3d779cc98b6f299ec43eb90ebb04f45f "pdflatex"
+  "425500_Report_AI.lot" 1710283009 623 179e3c30ec7e0d2618c639ca0c804012 "pdflatex"
+  "425500_Report_AI.out" 1710283009 1452 18c00091be6da6b4424c9188ec86756f "pdflatex"
+  "425500_Report_AI.tex" 1710283008 41426 ce5ee9e7279ca332adb117cf4626bcda ""
+  "425500_Report_AI.toc" 1710283009 5488 99e099841c0fbeb710e7e9e1a4e8a945 "pdflatex"
   "CULogo.png" 1709728370 37421 80845472f4d1ac3cb2568c488d5d8081 ""
   "cranfieldthesis.sty" 1709728370 6185 11ca3d1f05076144f63ee44fe000dc22 ""
   (generated)

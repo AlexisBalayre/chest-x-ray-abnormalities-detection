@@ -22,21 +22,48 @@ logging.basicConfig(
 
 
 def process_dicom_file(filepath):
+    """
+    Reads a DICOM file, applies VOI LUT (if available), normalizes the image, and converts to uint8.
+
+    Parameters:
+    - filepath (str): Path to the DICOM file.
+
+    Returns:
+    - tuple: Tuple containing the basename of the file and the processed image as a numpy array.
+             Returns None, None if an error occurs.
+    """
     try:
-        dicom = pydicom.dcmread(filepath, force=True)
-        image = apply_voi_lut(dicom.pixel_array, dicom)
+        dicom = pydicom.dcmread(filepath, force=True)  # Read the DICOM file
+        image = apply_voi_lut(dicom.pixel_array, dicom)  # Apply VOI LUT if available
         if dicom.PhotometricInterpretation == "MONOCHROME1":
-            image = np.amax(image) - image
+            image = np.amax(image) - image  # Invert the image if MONOCHROME1
         image = (
-            (image - np.min(image)) / (np.max(image) - np.min(image)) * 255
-        ).astype(np.uint8)
-        return os.path.basename(filepath), image
+            (image - np.min(image))
+            / (np.max(image) - np.min(image))
+            * 255  # Normalize the image
+        ).astype(
+            np.uint8
+        )  # Convert to uint8
+        return (
+            os.path.basename(filepath),
+            image,
+        )  # Return the basename and the processed image
     except Exception as e:
         logging.error(f"Error processing {filepath}: {e}")
         return None, None
 
 
 def get_unique_filename(hdf5_file, original_filename):
+    """
+    Generates a unique filename for the HDF5 file to avoid name clashes.
+
+    Parameters:
+    - hdf5_file (h5py.File): The HDF5 file object.
+    - original_filename (str): The original filename to be saved.
+
+    Returns:
+    - str: A unique filename within the HDF5 file.
+    """
     if original_filename not in hdf5_file:
         return original_filename
     else:
@@ -49,11 +76,25 @@ def get_unique_filename(hdf5_file, original_filename):
 
 
 def process_and_queue_dicom_file(filepath, write_queue):
+    """
+    Processes a DICOM file and queues it for writing to the HDF5 file.
+
+    Parameters:
+    - filepath (str): Path to the DICOM file.
+    - write_queue (multiprocessing.queues.Queue): Queue to hold processed data for writing.
+    """
     processed_data = process_dicom_file(filepath)
     write_queue.put(processed_data)
 
 
 def writer(write_queue, hdf5_path):
+    """
+    Consumes items from the queue and writes them to an HDF5 file.
+
+    Parameters:
+    - write_queue (multiprocessing.queues.Queue): Queue from which to consume data.
+    - hdf5_path (str): Path to the HDF5 file.
+    """
     with h5py.File(hdf5_path, "a") as hdf5_file:
         while True:
             item = write_queue.get()
@@ -71,6 +112,13 @@ def writer(write_queue, hdf5_path):
 
 
 def extract_dicom_images(input_folder, hdf5_path):
+    """
+    Main function to extract images from DICOM files and store them in an HDF5 file.
+
+    Parameters:
+    - input_folder (str): Folder containing DICOM files.
+    - hdf5_path (str): Path to the output HDF5 file.
+    """
     files = [
         os.path.join(input_folder, f)
         for f in os.listdir(input_folder)

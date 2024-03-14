@@ -15,6 +15,15 @@ logging.basicConfig(
 
 
 def process_dicom_file(filepath):
+    """
+    Reads and extracts metadata from a DICOM file.
+
+    Parameters:
+    - filepath (str): Path to the DICOM file.
+
+    Returns:
+    - dict: A dictionary containing the extracted metadata, or None if an error occurs.
+    """
     try:
         dicom = pydicom.dcmread(filepath, force=True)
         data = {
@@ -86,6 +95,13 @@ def process_dicom_file(filepath):
 
 
 def check_csv_header(csv_path, fieldnames):
+    """
+    Ensures the CSV file exists and has the correct header. Creates the file with the header if it doesn't exist.
+
+    Parameters:
+    - csv_path (str): Path to the CSV file where metadata will be saved.
+    - fieldnames (list): A list of header names for the CSV file.
+    """
     if not os.path.isfile(csv_path) or os.stat(csv_path).st_size == 0:
         with open(csv_path, mode="w", newline="") as csv_file:
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -93,13 +109,26 @@ def check_csv_header(csv_path, fieldnames):
 
 
 def save_batch_to_csv(csv_path, batch_data):
-    # Append mode without writing headers every time
+    """
+    Appends a batch of DICOM metadata records to a CSV file.
+
+    Parameters:
+    - csv_path (str): Path to the CSV file where metadata will be saved.
+    - batch_data (list of dicts): A list of dictionaries containing DICOM metadata.
+    """
     with open(csv_path, mode="a", newline="") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=batch_data[0].keys())
         writer.writerows(batch_data)
 
 
 def process_files_in_batch(files, csv_path):
+    """
+    Processes a batch of DICOM files to extract metadata and save to a CSV file.
+
+    Parameters:
+    - files (list): A list of paths to DICOM files to be processed.
+    - csv_path (str): Path to the CSV file where metadata will be saved.
+    """
     batch_data = [
         process_dicom_file(file)
         for file in files
@@ -110,6 +139,14 @@ def process_files_in_batch(files, csv_path):
 
 
 def extract_dicom_metadata(input_folder, csv_path, batch_size=10):
+    """
+    Extracts metadata from all DICOM files in a folder and saves it to a CSV file in batches.
+
+    Parameters:
+    - input_folder (str): Path to the folder containing DICOM files.
+    - csv_path (str): Path to the CSV file where metadata will be saved.
+    - batch_size (int, optional): The number of files to process in each batch.
+    """
     files = [
         os.path.join(input_folder, f)
         for f in os.listdir(input_folder)
@@ -155,5 +192,3 @@ def extract_dicom_metadata(input_folder, csv_path, batch_size=10):
             ]
             for future in as_completed(futures):
                 pbar.update(batch_size)
-
-

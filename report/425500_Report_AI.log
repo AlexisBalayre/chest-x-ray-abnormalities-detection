@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.14)  12 MAR 2024 22:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.14)  14 MAR 2024 18:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -771,170 +771,185 @@ Chapter 2.
 
 ] [4]
 Chapter 3.
+<../results/annotations_per_class.png, id=234, 1019.81pt x 452.69125pt>
+File: ../results/annotations_per_class.png Graphic file (type png)
+<use ../results/annotations_per_class.png>
+Package pdftex.def Info: ../results/annotations_per_class.png  used on input line 268.
+(pdftex.def)             Requested size: 341.43437pt x 151.56444pt.
+<../results/annotations_per_rad.png, id=235, 1019.81pt x 451.6875pt>
+File: ../results/annotations_per_rad.png Graphic file (type png)
+<use ../results/annotations_per_rad.png>
+Package pdftex.def Info: ../results/annotations_per_rad.png  used on input line 275.
+(pdftex.def)             Requested size: 341.43437pt x 151.22836pt.
+<../results/annotations_per_rad_class.png, id=236, 819.5418pt x 617.9085pt>
+File: ../results/annotations_per_rad_class.png Graphic file (type png)
+<use ../results/annotations_per_rad_class.png>
+Package pdftex.def Info: ../results/annotations_per_rad_class.png  used on input line 282.
+(pdftex.def)             Requested size: 341.43437pt x 257.42667pt.
 [5
 
-] [6]
+ <../results/annotations_per_class.png> <../results/annotations_per_rad.png>] [6 <../results/annotations_per_rad_class.png>] [7]
 Chapter 4.
-[7
+[8
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 377.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 407.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [8]
+) [9]
 
-LaTeX Warning: Reference `fig:openmpchunksizecrs' on page 9 undefined on input line 385.
-
-
-LaTeX Warning: Reference `fig:openmpchunksizellpack' on page 9 undefined on input line 386.
+LaTeX Warning: Reference `fig:openmpchunksizecrs' on page 10 undefined on input line 415.
 
 
-LaTeX Warning: Reference `fig:openmpthreadscrs' on page 9 undefined on input line 393.
+LaTeX Warning: Reference `fig:openmpchunksizellpack' on page 10 undefined on input line 416.
 
 
-LaTeX Warning: Reference `fig:openmpthreadsellpack' on page 9 undefined on input line 394.
-
-[9] [10] [11]
-
-LaTeX Warning: Reference `fig:cudaxblocksizecrs' on page 12 undefined on input line 471.
+LaTeX Warning: Reference `fig:openmpthreadscrs' on page 10 undefined on input line 423.
 
 
-LaTeX Warning: Reference `fig:cudaxblocksizeellpack' on page 12 undefined on input line 472.
+LaTeX Warning: Reference `fig:openmpthreadsellpack' on page 10 undefined on input line 424.
+
+[10] [11] [12]
+
+LaTeX Warning: Reference `fig:cudaxblocksizecrs' on page 13 undefined on input line 501.
 
 
-LaTeX Warning: Reference `fig:cudayblocksizecrs' on page 12 undefined on input line 479.
+LaTeX Warning: Reference `fig:cudaxblocksizeellpack' on page 13 undefined on input line 502.
 
 
-LaTeX Warning: Reference `fig:cudayblocksizeellpack' on page 12 undefined on input line 480.
+LaTeX Warning: Reference `fig:cudayblocksizecrs' on page 13 undefined on input line 509.
 
-[12]
-Overfull \hbox (5.02553pt too wide) in alignment at lines 552--558
+
+LaTeX Warning: Reference `fig:cudayblocksizeellpack' on page 13 undefined on input line 510.
+
+[13]
+Overfull \hbox (5.02553pt too wide) in alignment at lines 582--588
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (5.02553pt too wide) in alignment at lines 558--562
+Overfull \hbox (5.02553pt too wide) in alignment at lines 588--592
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (5.02553pt too wide) in alignment at lines 562--564
+Overfull \hbox (5.02553pt too wide) in alignment at lines 592--594
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (5.02553pt too wide) in alignment at lines 564--595
+Overfull \hbox (5.02553pt too wide) in alignment at lines 594--625
  [] [] [] [] [] [] 
  []
 
-[13] [14] [15]
+[14] [15] [16]
 Chapter 5.
-(./425500_Report_AI.bbl [16
+(./425500_Report_AI.bbl [17
 
 ]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) [17
+) [18
 
 ]
 Appendix A.
-[18
+[19
 
 ]
 
-Package natbib Warning: Citation `GCC' on page 19 undefined on input line 696.
+Package natbib Warning: Citation `GCC' on page 20 undefined on input line 726.
 
 
-Package natbib Warning: Citation `CUDA' on page 19 undefined on input line 697.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 710--711
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 719--720
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 731--732
-
- []
+Package natbib Warning: Citation `CUDA' on page 20 undefined on input line 727.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 740--741
 
  []
 
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 751--752
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--750
 
  []
 
 
-Overfull \hbox (12.50809pt too wide) in paragraph at lines 763--764
-[]\OT1/ptm/b/n/12 Description: \OT1/ptm/m/n/12 Per-form the matrix-vector mul-ti-pli-ca-tion in the CRS for-mat us-ing OpenMP 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 763--764
+Underfull \hbox (badness 10000) in paragraph at lines 761--762
 
  []
 
 
-Overfull \hbox (2.69229pt too wide) in paragraph at lines 777--778
-[]\OT1/ptm/b/n/12 Description: \OT1/ptm/m/n/12 Per-form the matrix-vector mul-ti-pli-ca-tion in the CRS for-mat us-ing CUDA 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 777--778
+Underfull \hbox (badness 10000) in paragraph at lines 770--771
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 791--792
+Underfull \hbox (badness 10000) in paragraph at lines 781--782
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 803--804
+Overfull \hbox (12.50809pt too wide) in paragraph at lines 793--794
+[]\OT1/ptm/b/n/12 Description: \OT1/ptm/m/n/12 Per-form the matrix-vector mul-ti-pli-ca-tion in the CRS for-mat us-ing OpenMP 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 793--794
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 817--818
+Overfull \hbox (2.69229pt too wide) in paragraph at lines 807--808
+[]\OT1/ptm/b/n/12 Description: \OT1/ptm/m/n/12 Per-form the matrix-vector mul-ti-pli-ca-tion in the CRS for-mat us-ing CUDA 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 807--808
 
  []
 
-[21] [22]
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 821--822
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--834
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 847--848
+
+ []
+
+[22] [23]
 Appendix B.
 
 Package natbib Warning: There were undefined citations.
 
-[23
+[24
 
 ] (./425500_Report_AI.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `425500_Report_AI.out' has not changed.
-(rerunfilecheck)             Checksum: 18C00091BE6DA6B4424C9188EC86756F;1452.
+(rerunfilecheck)             Checksum: 707D0F08A844724E1E63D82D00A39F7A;1452.
  ) 
 Here is how much of TeX's memory you used:
- 18647 strings out of 476025
- 310555 string characters out of 5790016
+ 18686 strings out of 476025
+ 311689 string characters out of 5790016
  1914388 words of memory out of 5000000
- 38630 multiletter control sequences out of 15000+600000
+ 38656 multiletter control sequences out of 15000+600000
  547751 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,12n,117p,505b,1162s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 425500_Report_AI.pdf (29 pages, 145265 bytes).
+Output written on 425500_Report_AI.pdf (30 pages, 294379 bytes).
 PDF statistics:
- 402 PDF objects out of 1000 (max. 8388607)
- 353 compressed objects within 4 object streams
- 136 named destinations out of 1000 (max. 500000)
- 102 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 375 compressed objects within 4 object streams
+ 145 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

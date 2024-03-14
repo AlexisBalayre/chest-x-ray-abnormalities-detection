@@ -176,6 +176,8 @@ images.This initiative underlines the need for greater precision in medical
 diagnosis, where current methods struggle in particular to specify the location
 of findings on X-ray images, potentially leading to incorrect diagnoses.
 
+\section{Problem Statement}
+
 \section{Dataset}
 
 The dataset provided to participants includes 18,000 annotated chest scans, of
@@ -259,7 +261,35 @@ presence of objects in the image.
 
 \chapter{Methodology}
 
-\section{Problem Statement}
+\section{Data Exploration}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../results/annotations_per_class.png}
+    \caption{Distribution of annotations per class}
+    \label{fig:annotations_per_class}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../results/annotations_per_rad.png}
+    \caption{Distribution of annotations per radiologist}
+    \label{fig:aannotations_per_rad}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../results/annotations_per_rad_class.png}
+    \caption{Distribution of annotations per image}
+    \label{fig:annotations_per_rad_class}
+\end{figure}
+
+\section{Data Extraction and Preprocessing}
+\subsection{DICOM files Metadata Extraction}
+
+\subsection{DICOM images preprocessing and extraction}
+
+\subsection{DICOM images features extraction}
 
 \section{Evaluation metrics for Faster R-CNN}
 
