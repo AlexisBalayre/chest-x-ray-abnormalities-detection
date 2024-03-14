@@ -7,14 +7,11 @@ Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: CUCitations.bib
-Warning--I didn't find a database entry for "10.1145/3017994"
-Warning--I didn't find a database entry for "Davis2011UFCollection"
-Warning--I didn't find a database entry for "Kolodziej2019SuiteSparseInterface"
 Warning--I didn't find a database entry for "GCC"
 Warning--I didn't find a database entry for "CUDA"
 You've used 0 entries,
             3506 wiz_defined-function locations,
-            696 strings with 4909 characters,
+            691 strings with 4786 characters,
 and the built_in function-call counts, 30 in all, are:
 = -- 0
 > -- 0
@@ -53,4 +50,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 2
-(There were 5 warnings)
+(There were 2 warnings)

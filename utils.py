@@ -1,35 +1,34 @@
-import pandas as pd
-from sklearn.model_selection import train_test_split
+import logging
+import h5py
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
-def split_dataset(
-    data_path, output_path, test_size=0.15, val_size=0.1, random_state=42
-):
-    data = pd.read_csv(data_path)
-    X = data.drop("class_id", axis=1)
-    y = data["class_id"]
+def get_pixel_array_from_hdf5(hdf5_path, filename):
+    """
+    Retrieves the pixel array for a given filename from an HDF5 file.
 
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=test_size, random_state=random_state, stratify=y
-    )
+    Parameters:
+    - hdf5_path: Path to the HDF5 file.
+    - filename: The original file name of the DICOM image.
 
-    X_train, X_val, y_train, y_val = train_test_split(
-        X_train,
-        y_train,
-        test_size=val_size,
-        random_state=random_state,
-        stratify=y_train,
-    )
+    Returns:
+    - A numpy array of the pixel data if found; None otherwise.
+    """
+    with h5py.File(hdf5_path, "r") as hdf5_file:
+        # Attempt to access the dataset directly by filename.
+        # Adjust this part if a more complex naming convention is used.
+        unique_filename = None
+        for key in hdf5_file.keys():
+            if filename in key:
+                unique_filename = key
+                break
 
-    train = pd.concat([X_train, y_train], axis=1)
-    test = pd.concat([X_test, y_test], axis=1)
-    val = pd.concat([X_val, y_val], axis=1)
-
-    train.to_csv(output_path + "train.csv", index=False)
-    test.to_csv(output_path + "test.csv", index=False)
-    val.to_csv(output_path + "val.csv", index=False)
-    return train, test
-
-
-if __name__ == "__main__":
-    split_dataset("train.csv", "data/")
+        if unique_filename is not None:
+            pixel_array = hdf5_file[unique_filename][:]
+            return pixel_array
+        else:
+            logging.error(f"File {filename} not found in HDF5.")
+            return None

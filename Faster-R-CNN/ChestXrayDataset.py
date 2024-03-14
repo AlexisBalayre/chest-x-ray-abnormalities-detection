@@ -6,6 +6,7 @@ import albumentations as A
 from albumentations.pytorch import ToTensorV2
 from PIL import Image
 import numpy as np
+import cv2
 
 
 class ChestXrayDataset(Dataset):
@@ -24,15 +25,11 @@ class ChestXrayDataset(Dataset):
             [
                 A.Resize(target_size[0], target_size[1]),
                 A.HorizontalFlip(p=0.5),
-                A.Normalize(
-                    mean=(0, 0, 0), std=(1, 1, 1), max_pixel_value=255.0, p=1.0
-                ),
+                A.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225], max_pixel_value=255.0, p=1.0),
                 ToTensorV2(p=1.0),
             ],
             bbox_params=A.BboxParams(
                 format="pascal_voc",
-                min_area=0,
-                min_visibility=0,
                 label_fields=["labels"],
             ),
         )
@@ -48,7 +45,7 @@ class ChestXrayDataset(Dataset):
                 agg_annotations[image_id]["boxes"].append(
                     [row["x_min"], row["y_min"], row["x_max"], row["y_max"]]
                 )
-                agg_annotations[image_id]["labels"].append(row["class_id"])
+                agg_annotations[image_id]["labels"].append(row["class_id"]+ 1) 
         return agg_annotations
 
     def __getitem__(self, idx):
@@ -57,7 +54,6 @@ class ChestXrayDataset(Dataset):
 
         with h5py.File(self.hdf5_path, "r") as hdf5_file:
             image_data = hdf5_file[image_id + ".dicom"][()]
-        # Convert grayscale image to RGB by stacking it across three channels
         image_data = np.repeat(image_data[:, :, np.newaxis], 3, axis=-1)
 
         transformed = self.transform(
@@ -66,11 +62,6 @@ class ChestXrayDataset(Dataset):
         image = transformed["image"]
         boxes = transformed["bboxes"]
         labels = transformed["labels"]
-
-        # Normalize bounding boxes to be in the range [0, 1]
-        boxes = [[(box[0] / self.target_size[1]), (box[1] / self.target_size[0]),
-              (box[2] / self.target_size[1]), (box[3] / self.target_size[0])]
-             for box in boxes]
 
         target = {}
         if boxes:
