@@ -1,3 +1,19 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{HuggingFaceObjectDetectionLeaderboard}
+Padilla R, Roberts A. Object Detection Leaderboard: Decoding Metrics and Their Potential Pitfalls; 2023.
+\newblock Available at: \url{https://huggingface.co/blog/object-detection-leaderboard}. Accessed: 2024-03-01.
+
+\bibitem{LITJENS201760}
+Litjens G, Kooi T, Bejnordi BE, Setio AAA, Ciompi F, Ghafoorian M, et~al.
+\newblock A survey on deep learning in medical image analysis.
+\newblock Medical Image Analysis. 2017;42:60-88.
+\newblock Available at: \url{https://www.sciencedirect.com/science/article/pii/S1361841517301135}.
+
+\bibitem{Shen2017}
+Shen D, Wu G, Suk HI.
+\newblock Deep Learning in Medical Image Analysis.
+\newblock Annual Review of Biomedical Engineering. 2017 Jun;19:221-48.
+\newblock Epub 2017 Mar 9.
 
 \end{thebibliography}

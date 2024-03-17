@@ -2,10 +2,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Distribution of annotations per class\relax }}{5}{figure.caption.5}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Distribution of annotations per radiologist\relax }}{5}{figure.caption.6}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Distribution of annotations per image\relax }}{6}{figure.caption.7}%
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Number of annotations per class. The y-axis is on a logarithmic scale to account for the wide range of annotation counts.\relax }}{6}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Number of annotations per radiologist. The distribution shows significant variability in the number of annotations made by different radiologists.\relax }}{7}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Number of annotations per radiologist and class. Darker colors indicate a higher number of annotations, showing a strong prevalence of 'No finding' annotations across all radiologists.\relax }}{7}{figure.caption.9}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
