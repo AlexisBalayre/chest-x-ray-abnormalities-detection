@@ -3,8 +3,8 @@ from preprocessing.dicom_pixels_processing import extract_dicom_images
 from preprocessing.dicom_pixels_features_extraction import extract_images_features
 
 dicom_files_test_folder = "/Volumes/ALEXIS/ai_project_cranfield/test"
-dicom_metadata_test_csv_path = "./dicom_metadata_test.csv"
-dicom_images_features_test_csv_path = "./dicom_pixels_features_test.csv"
+dicom_metadata_test_csv_path = "/Users/alexis/Cranfield/AI/assignment/data/test/dicom_metadata.csv"
+dicom_images_features_test_csv_path = "/Users/alexis/Cranfield/AI/assignment/data/test/test.csv"
 hdf5_test_path = "/Volumes/ALEXIS/ai_project_cranfield/dicom_images_final_test.hdf5"
 
 if __name__ == "__main__":
