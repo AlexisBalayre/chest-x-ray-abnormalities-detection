@@ -14,13 +14,11 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \providecommand \oddpage@label [2]{}
-\@writefile{toc}{\contentsline {chapter}{Abstract}{ii}{chapter*.1}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{Table of Contents}{iii}{chapter*.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{List of Figures}{v}{chapter*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Table of Contents}{ii}{chapter*.1}\protected@file@percent }
+\citation{fasterrnn}
+\@writefile{toc}{\contentsline {chapter}{List of Figures}{iv}{chapter*.2}\protected@file@percent }
 \citation{HuggingFaceObjectDetectionLeaderboard}
-\@writefile{toc}{\contentsline {chapter}{List of Tables}{vi}{chapter*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{List of Tables}{v}{chapter*.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -44,87 +42,106 @@
 \citation{HuggingFaceObjectDetectionLeaderboard}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.3}Disadvantages}{4}{subsubsection.2.2.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Using metrics to choose the right model}{4}{section.2.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Recommended Metrics for Various Object Detection Use Cases\nobreakspace  {}\cite  {HuggingFaceObjectDetectionLeaderboard}\relax }}{4}{table.caption.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Recommended Metrics for Various Object Detection Use Cases\nobreakspace  {}\cite  {HuggingFaceObjectDetectionLeaderboard}\relax }}{4}{table.caption.4}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{tab:object_detection_metrics}{{2.1}{4}{Recommended Metrics for Various Object Detection Use Cases~\cite {HuggingFaceObjectDetectionLeaderboard}\relax }{table.caption.5}{}}
+\newlabel{tab:object_detection_metrics}{{2.1}{4}{Recommended Metrics for Various Object Detection Use Cases~\cite {HuggingFaceObjectDetectionLeaderboard}\relax }{table.caption.4}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Methodology}{5}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Data Exploration}{5}{section.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Overview of the Dataset}{5}{subsection.3.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Labeling and Annotations}{5}{subsection.3.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Classes and Findings}{5}{subsection.3.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Annotation Distribution Across Classes}{5}{subsection.3.1.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Classes and associated findings Abnormalities Detection dataset\relax }}{6}{table.caption.6}\protected@file@percent }
-\newlabel{tab:classes}{{3.1}{6}{Classes and associated findings Abnormalities Detection dataset\relax }{table.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Number of annotations per class. The y-axis is on a logarithmic scale to account for the wide range of annotation counts.\relax }}{6}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:annotations_per_class}{{3.1}{6}{Number of annotations per class. The y-axis is on a logarithmic scale to account for the wide range of annotation counts.\relax }{figure.caption.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.5}Annotation Distribution Across Radiologists}{6}{subsection.3.1.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Number of annotations per radiologist. The distribution shows significant variability in the number of annotations made by different radiologists.\relax }}{7}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:annotations_per_rad}{{3.2}{7}{Number of annotations per radiologist. The distribution shows significant variability in the number of annotations made by different radiologists.\relax }{figure.caption.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.6}Inter-observer Variability}{7}{subsection.3.1.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Number of annotations per radiologist and class. Darker colors indicate a higher number of annotations, showing a strong prevalence of 'No finding' annotations across all radiologists.\relax }}{7}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:annotations_per_rad_class}{{3.3}{7}{Number of annotations per radiologist and class. Darker colors indicate a higher number of annotations, showing a strong prevalence of 'No finding' annotations across all radiologists.\relax }{figure.caption.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.7}Conclusion}{8}{subsection.3.1.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Classes and associated findings Abnormalities Detection dataset\relax }}{5}{table.caption.5}\protected@file@percent }
+\newlabel{tab:classes}{{3.1}{5}{Classes and associated findings Abnormalities Detection dataset\relax }{table.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Annotation Distribution Across Classes}{6}{subsection.3.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Number of annotations per class. The y-axis is on a logarithmic scale to account for the wide range of annotation counts.\relax }}{6}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:annotations_per_class}{{3.1}{6}{Number of annotations per class. The y-axis is on a logarithmic scale to account for the wide range of annotation counts.\relax }{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Annotation Distribution Across Radiologists}{6}{subsection.3.1.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Number of annotations per radiologist. The distribution shows significant variability in the number of annotations made by different radiologists.\relax }}{6}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:annotations_per_rad}{{3.2}{6}{Number of annotations per radiologist. The distribution shows significant variability in the number of annotations made by different radiologists.\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Inter-observer Variability}{6}{subsection.3.1.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Number of annotations per radiologist and class. Darker colors indicate a higher number of annotations, showing a strong prevalence of 'No finding' annotations across all radiologists.\relax }}{7}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:annotations_per_rad_class}{{3.3}{7}{Number of annotations per radiologist and class. Darker colors indicate a higher number of annotations, showing a strong prevalence of 'No finding' annotations across all radiologists.\relax }{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Data Extraction and Preprocessing}{8}{section.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Region Proposal Network (RPN)}{9}{subsection.3.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Fast R-CNN Network}{9}{subsection.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Model Training and Evaluation}{9}{subsection.3.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Model Overview}{10}{section.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Mathematical Foundation}{10}{subsection.3.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.1}Region Proposal Network (RPN)}{10}{subsubsection.3.3.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.2}Anchor Boxes}{10}{subsubsection.3.3.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1.3}Fast R-CNN Detector}{10}{subsubsection.3.3.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Training Workflow}{11}{subsection.3.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.1}Loss Functions}{11}{subsubsection.3.3.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.2}Multi-Task Training}{11}{subsubsection.3.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Evaluation Metrics}{11}{subsection.3.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3.1}Mean Average Precision (mAP)}{11}{subsubsection.3.3.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3.2}Mean Average Recall (mAR)}{11}{subsubsection.3.3.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Evaluation metrics for Faster R-CNN}{11}{section.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Intersection over Union (IoU)}{12}{subsection.3.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Precision and Recall}{12}{subsection.3.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Mean Average Precision (mAP)}{12}{subsection.3.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Results and Discussion}{13}{chapter.4}\protected@file@percent }
+\citation{fasterrnn}
+\citation{fasterrnn}
+\citation{PyTorchFasterRCNNResNet50FPNV2}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Model Architecture (Faster R-CNN)}{9}{section.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces The RPN module works as `attention' in Faster RCNN\nobreakspace  {}\cite  {fasterrnn}\relax }}{9}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:faster-rpn}{{3.4}{9}{The RPN module works as `attention' in Faster RCNN~\cite {fasterrnn}\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Region Proposal Network (RPN)}{9}{subsection.3.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Fast R-CNN Network}{10}{subsection.3.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Model Training and Evaluation}{10}{subsection.3.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Training Pipeline}{11}{section.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Framework (PyTorch Lightning)}{11}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Data Loading}{11}{subsection.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Training and Inference}{11}{subsection.3.4.3}\protected@file@percent }
+\citation{cyclicallr}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Model Optimization and Improvements}{12}{section.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Optimizer and Learning Rate Scheduler}{12}{subsection.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Data Augmentation}{12}{subsection.3.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Post-Validation}{12}{section.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Evaluation Metrics}{13}{section.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.1}Intersection over Union (IoU)}{13}{subsection.3.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.2}Precision and Recall}{13}{subsection.3.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.3}Mean Average Precision (mAP)}{13}{subsection.3.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Results and Discussion}{14}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Results}{13}{section.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces True Labels\relax }}{13}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:true_labels}{{4.1}{13}{True Labels\relax }{figure.caption.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Predicted labels\relax }}{13}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:predictions_without_filter}{{4.2}{13}{Predicted labels\relax }{figure.caption.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces True Labels\relax }}{14}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:true_labels}{{4.3}{14}{True Labels\relax }{figure.caption.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Filtered Predicted labels\relax }}{14}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:predictions_with_filter}{{4.4}{14}{Filtered Predicted labels\relax }{figure.caption.11}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Extended Evaluation Metrics per Class\relax }}{14}{table.caption.12}\protected@file@percent }
-\newlabel{tab:extended_metrics}{{4.1}{14}{Extended Evaluation Metrics per Class\relax }{table.caption.12}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}AI Ethical challenges in the medical sector}{14}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Respect for Confidentiality and Data Security}{15}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Algorithmic bias and fairness}{15}{subsection.4.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Transparency and Explicability}{15}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Responsibility and Professional Autonomy}{15}{section.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Conclusion}{15}{subsection.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Results}{14}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Training Loss Evolution}{14}{subsection.4.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Training Loss Evolution\relax }}{14}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:training_loss}{{4.1}{14}{Training Loss Evolution\relax }{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Validation Accuracy Evolution}{15}{subsection.4.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Validation Accuracy Evolution\relax }}{15}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:annotations_per_class}{{4.2}{15}{Validation Accuracy Evolution\relax }{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Evaluation Metrics per Class}{15}{subsection.4.1.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Evaluation Metrics per Class\relax }}{15}{table.caption.12}\protected@file@percent }
+\newlabel{tab:extended_metrics}{{4.1}{15}{Evaluation Metrics per Class\relax }{table.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Predictions Visualisation}{16}{subsection.4.1.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces True Labels\relax }}{16}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:true_labels}{{4.3}{16}{True Labels\relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Predicted labels\relax }}{16}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:predictions_without_filter}{{4.4}{16}{Predicted labels\relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces True Labels\relax }}{16}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:true_labels}{{4.5}{16}{True Labels\relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Filtered Predicted labels\relax }}{16}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:predictions_with_filter}{{4.6}{16}{Filtered Predicted labels\relax }{figure.caption.14}{}}
+\citation{Murdoch2021}
+\citation{Mittermaier2023}
+\citation{Amann2020}
+\citation{Naik2022}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}AI Ethical challenges in the medical sector}{17}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Respect for Confidentiality and Data Security}{17}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Algorithmic bias and fairness}{17}{subsection.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Transparency and Explicability}{17}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Responsibility and Professional Autonomy}{17}{section.4.4}\protected@file@percent }
 \bibstyle{CranfieldNumbered}
 \bibdata{CUCitations}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{16}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{18}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\bibcite{HuggingFaceObjectDetectionLeaderboard}{{1}{}{{}}{{}}}
-\bibcite{LITJENS201760}{{2}{}{{}}{{}}}
-\bibcite{Shen2017}{{3}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{References}{17}{chapter*.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Source Codes}{18}{appendix.A}\protected@file@percent }
+\bibcite{fasterrnn}{{1}{}{{}}{{}}}
+\bibcite{HuggingFaceObjectDetectionLeaderboard}{{2}{}{{}}{{}}}
+\bibcite{LITJENS201760}{{3}{}{{}}{{}}}
+\bibcite{Shen2017}{{4}{}{{}}{{}}}
+\bibcite{PyTorchFasterRCNNResNet50FPNV2}{{5}{}{{}}{{}}}
+\bibcite{cyclicallr}{{6}{}{{}}{{}}}
+\bibcite{Murdoch2021}{{7}{}{{}}{{}}}
+\bibcite{Mittermaier2023}{{8}{}{{}}{{}}}
+\bibcite{Amann2020}{{9}{}{{}}{{}}}
+\bibcite{Naik2022}{{10}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{References}{19}{chapter*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Source Codes}{20}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.A}Dataset Class}{18}{section.1.A.A}\protected@file@percent }
-\newlabel{appendix:ChestXrayDataset}{{A.A}{18}{Dataset Class}{section.1.A.A}{}}
-\@writefile{lol}{\contentsline {lstlisting}{../Faster\textendash R\textendash CNN/ChestXrayDataset.py}{18}{lstlisting.A.-1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A.B}Data Module Class}{21}{section.1.A.B}\protected@file@percent }
-\newlabel{appendix:ChestXrayDataModule}{{A.B}{21}{Data Module Class}{section.1.A.B}{}}
-\@writefile{lol}{\contentsline {lstlisting}{../Faster\textendash R\textendash CNN/ChestXrayDataModule.py}{21}{lstlisting.A.-2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A.C}Faster-R-CNN Lightning Model Class}{24}{section.1.A.C}\protected@file@percent }
-\newlabel{appendix:ChestXrayLightningModel}{{A.C}{24}{Faster-R-CNN Lightning Model Class}{section.1.A.C}{}}
-\@writefile{lol}{\contentsline {lstlisting}{../Faster\textendash R\textendash CNN/ChestXrayLightningModel.py}{24}{lstlisting.A.-3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.A}Dataset Class}{20}{section.1.A.A}\protected@file@percent }
+\newlabel{appendix:ChestXrayDataset}{{A.A}{20}{Dataset Class}{section.1.A.A}{}}
+\@writefile{lol}{\contentsline {lstlisting}{../Faster\textendash R\textendash CNN/ChestXrayDataset.py}{20}{lstlisting.A.-1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.B}Data Module Class}{23}{section.1.A.B}\protected@file@percent }
+\newlabel{appendix:ChestXrayDataModule}{{A.B}{23}{Data Module Class}{section.1.A.B}{}}
+\@writefile{lol}{\contentsline {lstlisting}{../Faster\textendash R\textendash CNN/ChestXrayDataModule.py}{23}{lstlisting.A.-2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.C}Faster-R-CNN Lightning Model Class}{26}{section.1.A.C}\protected@file@percent }
+\newlabel{appendix:ChestXrayLightningModel}{{A.C}{26}{Faster-R-CNN Lightning Model Class}{section.1.A.C}{}}
+\@writefile{lol}{\contentsline {lstlisting}{../Faster\textendash R\textendash CNN/ChestXrayLightningModel.py}{26}{lstlisting.A.-3}\protected@file@percent }
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\gdef \@abspage@last{32}
+\gdef \@abspage@last{33}

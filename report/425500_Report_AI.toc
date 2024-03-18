@@ -1,7 +1,6 @@
-\contentsline {chapter}{Abstract}{ii}{chapter*.1}%
-\contentsline {chapter}{Table of Contents}{iii}{chapter*.2}%
-\contentsline {chapter}{List of Figures}{v}{chapter*.3}%
-\contentsline {chapter}{List of Tables}{vi}{chapter*.4}%
+\contentsline {chapter}{Table of Contents}{ii}{chapter*.1}%
+\contentsline {chapter}{List of Figures}{iv}{chapter*.2}%
+\contentsline {chapter}{List of Tables}{v}{chapter*.3}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}literature Review}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Deep Learning in Medical Imaging}{2}{section.2.1}%
@@ -20,42 +19,40 @@
 \contentsline {chapter}{\numberline {3}Methodology}{5}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Data Exploration}{5}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Overview of the Dataset}{5}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Labeling and Annotations}{5}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Classes and Findings}{5}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Annotation Distribution Across Classes}{5}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Annotation Distribution Across Radiologists}{6}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Inter-observer Variability}{7}{subsection.3.1.6}%
-\contentsline {subsection}{\numberline {3.1.7}Conclusion}{8}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.2}Annotation Distribution Across Classes}{6}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Annotation Distribution Across Radiologists}{6}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Inter-observer Variability}{6}{subsection.3.1.4}%
 \contentsline {section}{\numberline {3.2}Data Extraction and Preprocessing}{8}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Region Proposal Network (RPN)}{9}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Fast R-CNN Network}{9}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Model Training and Evaluation}{9}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Model Overview}{10}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Mathematical Foundation}{10}{subsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.1.1}Region Proposal Network (RPN)}{10}{subsubsection.3.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.3.1.2}Anchor Boxes}{10}{subsubsection.3.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.3.1.3}Fast R-CNN Detector}{10}{subsubsection.3.3.1.3}%
-\contentsline {subsection}{\numberline {3.3.2}Training Workflow}{11}{subsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.2.1}Loss Functions}{11}{subsubsection.3.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.3.2.2}Multi-Task Training}{11}{subsubsection.3.3.2.2}%
-\contentsline {subsection}{\numberline {3.3.3}Evaluation Metrics}{11}{subsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.3.1}Mean Average Precision (mAP)}{11}{subsubsection.3.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.3.2}Mean Average Recall (mAR)}{11}{subsubsection.3.3.3.2}%
-\contentsline {section}{\numberline {3.4}Evaluation metrics for Faster R-CNN}{11}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Intersection over Union (IoU)}{12}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Precision and Recall}{12}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Mean Average Precision (mAP)}{12}{subsection.3.4.3}%
-\contentsline {chapter}{\numberline {4}Results and Discussion}{13}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Results}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}AI Ethical challenges in the medical sector}{14}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Respect for Confidentiality and Data Security}{15}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Algorithmic bias and fairness}{15}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Transparency and Explicability}{15}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Responsibility and Professional Autonomy}{15}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Conclusion}{15}{subsection.4.4.1}%
-\contentsline {chapter}{\numberline {5}Conclusion}{16}{chapter.5}%
-\contentsline {chapter}{References}{17}{chapter*.13}%
-\contentsline {chapter}{\numberline {A}Source Codes}{18}{appendix.A}%
-\contentsline {section}{\numberline {A.A}Dataset Class}{18}{section.1.A.A}%
-\contentsline {section}{\numberline {A.B}Data Module Class}{21}{section.1.A.B}%
-\contentsline {section}{\numberline {A.C}Faster-R-CNN Lightning Model Class}{24}{section.1.A.C}%
+\contentsline {section}{\numberline {3.3}Model Architecture (Faster R-CNN)}{9}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Region Proposal Network (RPN)}{9}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Fast R-CNN Network}{10}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Model Training and Evaluation}{10}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Training Pipeline}{11}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Framework (PyTorch Lightning)}{11}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Data Loading}{11}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Training and Inference}{11}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Model Optimization and Improvements}{12}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Optimizer and Learning Rate Scheduler}{12}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Data Augmentation}{12}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Post-Validation}{12}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Evaluation Metrics}{13}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Intersection over Union (IoU)}{13}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Precision and Recall}{13}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Mean Average Precision (mAP)}{13}{subsection.3.7.3}%
+\contentsline {chapter}{\numberline {4}Results and Discussion}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Results}{14}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Training Loss Evolution}{14}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Validation Accuracy Evolution}{15}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Evaluation Metrics per Class}{15}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Predictions Visualisation}{16}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}AI Ethical challenges in the medical sector}{17}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Respect for Confidentiality and Data Security}{17}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Algorithmic bias and fairness}{17}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Transparency and Explicability}{17}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Responsibility and Professional Autonomy}{17}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{18}{chapter.5}%
+\contentsline {chapter}{References}{19}{chapter*.15}%
+\contentsline {chapter}{\numberline {A}Source Codes}{20}{appendix.A}%
+\contentsline {section}{\numberline {A.A}Dataset Class}{20}{section.1.A.A}%
+\contentsline {section}{\numberline {A.B}Data Module Class}{23}{section.1.A.B}%
+\contentsline {section}{\numberline {A.C}Faster-R-CNN Lightning Model Class}{26}{section.1.A.C}%

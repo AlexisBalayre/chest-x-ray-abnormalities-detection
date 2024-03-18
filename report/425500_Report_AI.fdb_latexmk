@@ -1,23 +1,26 @@
 # Fdb version 4
-["bibtex 425500_Report_AI"] 1710745181 "425500_Report_AI.aux" "425500_Report_AI.bbl" "425500_Report_AI" 1710745183 0
-  "./CUCitations.bib" 1710705284 28419 d081893839d5623a1b6cc40068532046 ""
+["bibtex 425500_Report_AI"] 1710753956 "425500_Report_AI.aux" "425500_Report_AI.bbl" "425500_Report_AI" 1710753959 0
+  "./CUCitations.bib" 1710749331 28740 589dc2ab5c732c1eab53328262650e61 ""
   "./CranfieldNumbered.bst" 1709728370 40883 e68dccfb69fb01c9688750392ebeb179 ""
-  "425500_Report_AI.aux" 1710745183 13721 2896d923b755e796c9ad95388b5889b4 "pdflatex"
+  "425500_Report_AI.aux" 1710753959 14588 b877c8e701c6d31b91bf2c75f22c40a4 "pdflatex"
   (generated)
   "425500_Report_AI.bbl"
   "425500_Report_AI.blg"
   (rewritten before read)
-["pdflatex"] 1710745181 "/Users/alexis/Cranfield/AI/assignment/report/425500_Report_AI.tex" "425500_Report_AI.pdf" "425500_Report_AI" 1710745183 0
+["pdflatex"] 1710753956 "/Users/alexis/Cranfield/AI/assignment/report/425500_Report_AI.tex" "425500_Report_AI.pdf" "425500_Report_AI" 1710753959 0
   "../Faster-R-CNN/ChestXrayDataModule.py" 1710716715 4905 2bdef1ebb59a6d848e9640142fd72ee7 ""
   "../Faster-R-CNN/ChestXrayDataset.py" 1710716690 6281 7b3efcaf6743abd51ae4b39b48e8176e ""
   "../Faster-R-CNN/ChestXrayLightningModel.py" 1710716692 5725 365f05a18658acb5d0a33db55aed2e63 ""
+  "../faster-rcnn-rpn-attention.png" 1710749094 105272 d17324400745ce876a6d287480170092 ""
   "../results/annotations_per_class.png" 1710440049 123773 c98e82696f358021a9901a1610be1602 ""
   "../results/annotations_per_rad.png" 1710440076 132078 f13e61d1a91fb2cf2ad3c9d720e120e5 ""
   "../results/annotations_per_rad_class.png" 1710440121 38457 6d6e845a1e10ceeb6f1cf4bc6df59860 ""
   "../results/predictions.png" 1710726018 406138 a36dc4f378c55fd183fa734e6b985355 ""
   "../results/predictions_with_filter.png" 1710726041 349777 8b3f52bc91c0c84ea68e5a82469c49af ""
+  "../results/training.png" 1710724445 291851 824ab5990cd233eedb43730662a3c850 ""
   "../results/true_labels.png" 1710726001 365361 d576f941f89e09ded6d986b83d7591c4 ""
-  "/Users/alexis/Cranfield/AI/assignment/report/425500_Report_AI.tex" 1710745179 38073 34e3c04f8bec812eeecbac32063b948f ""
+  "../results/validation.png" 1710724401 402166 9d2eb3ab1e8ba2b3c4ceb0b48cc9459e ""
+  "/Users/alexis/Cranfield/AI/assignment/report/425500_Report_AI.tex" 1710753952 41066 790f88f1928663a260973a0bb717941c ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -172,13 +175,13 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1699977258 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1699977188 7883458 0fc50070f6972b3c0ed45389126cac27 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "425500_Report_AI.aux" 1710745183 13721 2896d923b755e796c9ad95388b5889b4 "pdflatex"
-  "425500_Report_AI.bbl" 1710745181 815 cf970a1ca8c17dff148200e72bf5e058 "bibtex 425500_Report_AI"
-  "425500_Report_AI.lof" 1710745183 1271 261919062f85c714fa979fff687047d2 "pdflatex"
-  "425500_Report_AI.lot" 1710745183 616 6c53b1bba412d398d7c008dd9d076bd1 "pdflatex"
-  "425500_Report_AI.out" 1710745183 1330 2625a855d5b8451a52e57e98bf35a2e8 "pdflatex"
-  "425500_Report_AI.tex" 1710745179 38073 34e3c04f8bec812eeecbac32063b948f ""
-  "425500_Report_AI.toc" 1710745183 5390 d534626372b44df138c8736f3c6fe456 "pdflatex"
+  "425500_Report_AI.aux" 1710753959 14588 b877c8e701c6d31b91bf2c75f22c40a4 "pdflatex"
+  "425500_Report_AI.bbl" 1710753956 2425 03b4def2bdd4383cea620b400bb26f36 "bibtex 425500_Report_AI"
+  "425500_Report_AI.lof" 1710753959 1651 d7988894cbf0780cb6aa62f493f7d3ea "pdflatex"
+  "425500_Report_AI.lot" 1710753959 587 2e22c1dab8977a7bcd576fabfcf3dd62 "pdflatex"
+  "425500_Report_AI.out" 1710753959 1245 d08356dbe0f2ee7a159d086fae3bc47b "pdflatex"
+  "425500_Report_AI.tex" 1710753952 41066 790f88f1928663a260973a0bb717941c ""
+  "425500_Report_AI.toc" 1710753959 5123 0327e869daaec79961f623859592fe4f "pdflatex"
   "CULogo.png" 1709728370 37421 80845472f4d1ac3cb2568c488d5d8081 ""
   "cranfieldthesis.sty" 1709728370 6185 11ca3d1f05076144f63ee44fe000dc22 ""
   (generated)

@@ -7,47 +7,53 @@ Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: CUCitations.bib
+Warning--empty author and editor in fasterrnn
+Warning--missing publisher in fasterrnn
 Warning--empty author and editor in HuggingFaceObjectDetectionLeaderboard
 Warning--missing publisher in HuggingFaceObjectDetectionLeaderboard
-You've used 3 entries,
+Warning--empty author and editor in PyTorchFasterRCNNResNet50FPNV2
+Warning--missing publisher in PyTorchFasterRCNNResNet50FPNV2
+Warning--empty author and editor in cyclicallr
+Warning--missing publisher in cyclicallr
+You've used 10 entries,
             3506 wiz_defined-function locations,
-            716 strings with 5680 characters,
-and the built_in function-call counts, 6806 in all, are:
-= -- 787
-> -- 61
-< -- 30
-+ -- 31
-- -- 14
-* -- 555
-:= -- 750
-add.period$ -- 12
-call.type$ -- 3
+            769 strings with 7506 characters,
+and the built_in function-call counts, 19182 in all, are:
+= -- 2215
+> -- 168
+< -- 60
++ -- 85
+- -- 37
+* -- 1583
+:= -- 2112
+add.period$ -- 35
+call.type$ -- 10
 change.case$ -- 0
-chr.to.int$ -- 66
-cite$ -- 5
-duplicate$ -- 543
-empty$ -- 658
-format.name$ -- 15
-if$ -- 1587
+chr.to.int$ -- 141
+cite$ -- 18
+duplicate$ -- 1484
+empty$ -- 1891
+format.name$ -- 42
+if$ -- 4483
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 33
-newline$ -- 19
-num.names$ -- 3
-pop$ -- 88
+int.to.str$ -- 10
+missing$ -- 103
+newline$ -- 52
+num.names$ -- 10
+pop$ -- 253
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 70
+skip$ -- 209
 stack$ -- 0
-substring$ -- 1306
-swap$ -- 76
-text.length$ -- 13
+substring$ -- 3704
+swap$ -- 234
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 33
-width$ -- 4
-write$ -- 38
-(There were 2 warnings)
+warning$ -- 8
+while$ -- 93
+width$ -- 12
+write$ -- 112
+(There were 8 warnings)

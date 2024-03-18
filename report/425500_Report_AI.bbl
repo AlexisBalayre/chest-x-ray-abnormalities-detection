@@ -1,4 +1,7 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{fasterrnn}
+Ren S, He K, Girshick R, Sun J. Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks; 2016.
 
 \bibitem{HuggingFaceObjectDetectionLeaderboard}
 Padilla R, Roberts A. Object Detection Leaderboard: Decoding Metrics and Their Potential Pitfalls; 2023.
@@ -15,5 +18,35 @@ Shen D, Wu G, Suk HI.
 \newblock Deep Learning in Medical Image Analysis.
 \newblock Annual Review of Biomedical Engineering. 2017 Jun;19:221-48.
 \newblock Epub 2017 Mar 9.
+
+\bibitem{PyTorchFasterRCNNResNet50FPNV2}
+Rath SR. Object Detection using PyTorch Faster RCNN ResNet50 FPN V2; 2022.
+\newblock Available at: \url{https://debuggercafe.com/object-detection-using-pytorch-faster-rcnn-resnet50-fpn-v2/}. Accessed: 2024-03-01.
+
+\bibitem{cyclicallr}
+Smith LN. Cyclical Learning Rates for Training Neural Networks; 2017.
+
+\bibitem{Murdoch2021}
+Murdoch B.
+\newblock Privacy and artificial intelligence: challenges for protecting health information in a new era.
+\newblock BMC Medical Ethics. 2021;22(1):122.
+\newblock Available at: \url{https://doi.org/10.1186/s12910-021-00687-3}.
+
+\bibitem{Mittermaier2023}
+Mittermaier M, Raza MM, Kvedar JC.
+\newblock Bias in AI-based models for medical applications: challenges and mitigation strategies.
+\newblock npj Digital Medicine. 2023;6(1):113.
+\newblock Available at: \url{https://doi.org/10.1038/s41746-023-00858-z}.
+
+\bibitem{Amann2020}
+Amann J, Blasimme A, Vayena E, Frey D, Madai VI, the Precise4Q~consortium.
+\newblock Explainability for artificial intelligence in healthcare: a multidisciplinary perspective.
+\newblock BMC Medical Informatics and Decision Making. 2020;20(1):310.
+\newblock Available at: \url{https://doi.org/10.1186/s12911-020-01332-6}.
+
+\bibitem{Naik2022}
+Naik N, Hameed BMZ, Shetty DK, Swain D, Shah M, Paul R, et~al.
+\newblock Legal and Ethical Consideration in Artificial Intelligence in Healthcare: Who Takes Responsibility?
+\newblock Frontiers in surgery. 2022;9:862322.
 
 \end{thebibliography}

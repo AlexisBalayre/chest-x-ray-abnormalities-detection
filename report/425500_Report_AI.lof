@@ -1,14 +1,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Number of annotations per class. The y-axis is on a logarithmic scale to account for the wide range of annotation counts.\relax }}{6}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Number of annotations per radiologist. The distribution shows significant variability in the number of annotations made by different radiologists.\relax }}{6}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Number of annotations per radiologist and class. Darker colors indicate a higher number of annotations, showing a strong prevalence of 'No finding' annotations across all radiologists.\relax }}{7}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The RPN module works as `attention' in Faster RCNN\nobreakspace {}\cite {fasterrnn}\relax }}{9}{figure.caption.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Number of annotations per class. The y-axis is on a logarithmic scale to account for the wide range of annotation counts.\relax }}{6}{figure.caption.7}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Number of annotations per radiologist. The distribution shows significant variability in the number of annotations made by different radiologists.\relax }}{7}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Number of annotations per radiologist and class. Darker colors indicate a higher number of annotations, showing a strong prevalence of 'No finding' annotations across all radiologists.\relax }}{7}{figure.caption.9}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces True Labels\relax }}{13}{figure.caption.10}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Predicted labels\relax }}{13}{figure.caption.10}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces True Labels\relax }}{14}{figure.caption.11}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Filtered Predicted labels\relax }}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Training Loss Evolution\relax }}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Validation Accuracy Evolution\relax }}{15}{figure.caption.11}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces True Labels\relax }}{16}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Predicted labels\relax }}{16}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces True Labels\relax }}{16}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Filtered Predicted labels\relax }}{16}{figure.caption.14}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

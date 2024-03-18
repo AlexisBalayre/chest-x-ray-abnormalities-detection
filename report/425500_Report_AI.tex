@@ -106,28 +106,21 @@
 % Form Title Pages
 \maketitle
 
-% Abstract and Keywords
-\begin{abstract}
-
-    ru
-
-\end{abstract}
-
 % Use single spacing for Table of Contents, List of Figures, etc
 {
-\clearpage
-\singlespacing
-% Table of Contents
-{
-    \tableofcontents
-}
-\clearpage
+    \clearpage
+    \singlespacing
+    % Table of Contents
+    {
+        \tableofcontents
+    }
+    \clearpage
 
-% List of Figures
-\listoffigures
+    % List of Figures
+    \listoffigures
 
-% List of Tables
-\listoftables
+    % List of Tables
+    \listoftables
 }
 
 %% Main Matter
@@ -157,7 +150,7 @@ accurate analysis of radiographic images, which could significantly improve
 clinical decisions and, consequently, patient outcomes.
 
 The aim of this research was to design a deep learning algorithm exploiting a
-comprehensive dataset of 18,000 annotated chest scans provided by the
+comprehensive dataset of 15,000 annotated chest scans provided by the
 Institute. This model aims to automatically detect abnormalities in chest
 X-rays, demonstrating the potential of AI not only as a viable diagnostic
 support tool but also as a means of improving diagnostic accuracy and reducing
@@ -165,14 +158,6 @@ diagnosis times. By focusing on the detection and classification of thoracic
 abnormalities, this initiative seeks to address the pressing needs of
 healthcare professionals, particularly in regions where the lack of experienced
 radiologists can compromise the quality of patient care.
-
-The creation and validation of such a model represents a significant advance in
-the field of radiology, providing healthcare professionals with a reliable
-secondary opinion that could reduce the risk of diagnostic errors and improve
-patient care pathways. This document describes the methodologies used to
-develop the model, the challenges encountered during its development, and the
-potential impact of this technological innovation on improving diagnostic
-accuracy worldwide.
 
 \chapter{literature Review}
 
@@ -280,6 +265,8 @@ correctly labelling objects across different scenarios.
     \item \textbf{Intersection over Union (IoU):} Fundamental metric used in object detection to evaluate the accuracy of the bounding boxes drawn by the model. IoU measures the overlap between the predicted bounding box and the ground truth bounding box, expressed as the ratio of their intersection over their union. A detection is classified as a true positive or false positive based on whether the IoU exceeds a specific threshold.
 \end{itemize}
 
+In order to choose the best model, the following table can be used.
+
 \begin{table}[H]
     \centering
     \caption{Recommended Metrics for Various Object Detection Use Cases~\cite{HuggingFaceObjectDetectionLeaderboard}}
@@ -311,25 +298,14 @@ correctly labelling objects across different scenarios.
 \subsection{Overview of the Dataset}
 
 The dataset provided in the VinBigData Chest X-ray Abnormalities Detection
-competition consists of 18,000 postero-anterior chest X-ray scans, meticulously
+competition consists of 15,000 postero-anterior chest X-ray scans, meticulously
 annotated for the presence of various thoracic abnormalities. Each image is
 labeled with one or more of 14 distinct abnormality classes, with a dedicated
 class for normal observations without findings. The images are stored in DICOM
 format, which not only captures the radiographic image but also houses rich
 metadata that could potentially enhance analysis and model training.
 
-\subsection{Labeling and Annotations}
-
-Annotations in this dataset are provided by a panel of experienced
-radiologists, indicating the presence of 14 critical radiographic findings,
-each associated with a bounding box to localize abnormalities within the scans. 
-
-\subsection{Classes and Findings}
-
-The dataset categorizes thoracic abnormalities into 14 classes, with an
-additional 15th class for scans without findings:
-
-\begin{table}
+\begin{table}[H]
     \centering
     \begin{tabular}{|c|c|}
         \hline
@@ -358,10 +334,10 @@ additional 15th class for scans without findings:
 
 \subsection{Annotation Distribution Across Classes}
 Initial examination of the dataset revealed a notable class imbalance. The
-number of annotations per class was visualized in a bar chart (Figure
-\ref{fig:annotations_per_class}), showing that certain conditions such as
+number of annotations per class was visualized in a
+Figure~\ref{fig:annotations_per_class}, showing that certain conditions such as
 Aortic Enlargement (Class 0) are more commonly annotated compared to others.
-The class 'No finding' (Class 14) had the most annotations, indicating a large
+The class `No finding' (Class 14) had the most annotations, indicating a large
 proportion of normal cases.
 
 \begin{figure}[H]
@@ -373,9 +349,9 @@ proportion of normal cases.
 
 \subsection{Annotation Distribution Across Radiologists}
 The dataset annotations are also characterized by variability across
-radiologists. A bar chart (Figure \ref{fig:annotations_per_rad}) highlights the
-number of annotations contributed by each radiologist, with some radiologists
-annotating more extensively than others.
+radiologists. Figure~\ref{fig:annotations_per_rad} highlights the number of
+annotations contributed by each radiologist, with some radiologists annotating
+more extensively than others.
 
 \begin{figure}[H]
     \centering
@@ -400,14 +376,12 @@ diagnostic criteria or individual radiologist experience.
     \label{fig:annotations_per_rad_class}
 \end{figure}
 
-\subsection{Conclusion}
 The initial data exploration indicates a rich and complex dataset that presents
 certain challenges for machine learning tasks, including class imbalance and
 significant inter-observer variability. These insights set the stage for
-careful preprocessing, the necessity of balancing techniques, and the
-development of sophisticated models that can account for the nuances in
-annotation patterns.
+careful preprocessing and the necessity of balancing techniques.
 
+\newpage
 \section{Data Extraction and Preprocessing}
 
 The workflow for preparing DICOM files for analysis encompasses three primary
@@ -417,7 +391,6 @@ outlined as follows:
 
 \begin{enumerate}
     \item \textbf{DICOM File Metadata Extraction:}
-
           The process begins with the extraction of metadata from DICOM files, which are
           rich in information such as patient demographics, study specifics, and imaging
           parameters. This extraction is facilitated by the \texttt{pydicom} library,
@@ -426,7 +399,6 @@ outlined as follows:
           straightforward access and the ease of subsequent analysis.
 
     \item \textbf{DICOM File Pixel Array Processing and Extraction:}
-
           Following metadata extraction, attention turns to the DICOM files' pixel data.
           This phase includes applying the Value of Interest (VOI) Look-Up Table (LUT)
           for image normalization, adjusting images based on their photometric
@@ -436,31 +408,38 @@ outlined as follows:
           access to individual images.
 
     \item \textbf{DICOM File Features Extraction:}
-
           The concluding stage involves extracting salient features from the processed
           images. This encompasses computing features related to texture, shape, and
           intensity histograms to quantitatively describe each image's essential
           characteristics. These features are vital for training machine learning models,
           as they provide a numeric representation of the images. The extracted features
           are assembled into a structured dataset, usually saved in a CSV file, ready for
-          in-depth analysis or model training.
+          in-depth analysis and model training.
 \end{enumerate}
 
-This enumerated workflow systematically transforms DICOM files into a
-structured format, setting the stage for comprehensive medical image analysis
-and the development of predictive models.
+In addition, the training dataset has been split into 3 datasets (training,
+validation and test). This division was made according to the `class\_id' label
+value to avoid any training problems.
 
-section{Faster R-CNN Model}
+\newpage
+\section{Model Architecture (Faster R-CNN)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../faster-rcnn-rpn-attention.png}
+    \caption{The RPN module works as `attention' in Faster RCNN~\cite{fasterrnn}}
+    \label{fig:faster-rpn}
+\end{figure}
 
 The Faster R-CNN model is a deep learning architecture for object detection,
 consisting of two main components: a Region Proposal Network (RPN) and a Fast
 R-CNN object detection network. The workflow of this model can be described as
-follows:
+follows~\cite{PyTorchFasterRCNNResNet50FPNV2}:
 
 \subsection{Region Proposal Network (RPN)}
 
 The RPN is a fully convolutional network that operates on the feature maps
-$\mathbf{X}$ generated by the backbone network (e.g., ResNet-50). It generates
+$\mathbf{X}$ generated by the backbone network (here ResNet-50). It generates
 object proposals by classifying anchor boxes $\mathbf{a}$ as either containing
 an object or not, and also refines the bounding box coordinates for positive
 proposals.
@@ -527,103 +506,102 @@ and the Fast R-CNN loss:
 
 The model is trained by minimizing this loss function using an optimization
 algorithm, such as Stochastic Gradient Descent (SGD) with momentum and weight
-decay.
+decay. Here we use the transfer learning technique, using a model pre-trained
+on a large dataset. The features learned can be transferred to a new object
+detection task with less data. This approach allows the model to benefit from
+general visual knowledge, making it easier to learn specific object detection
+tasks with better generalisation and less training data. Only the last part of
+the pipeline is modified (classifier).
 
-During evaluation, the model's performance is assessed using metrics such as
-mean Average Precision (mAP) and mean Average Recall (mAR). These metrics
-measure the average precision and recall across different classes and
-confidence thresholds, providing an overall performance score for object
-detection.
+\newpage
+\section{Training Pipeline}
 
-\section{Model Overview}
-Our model is an implementation of Faster R-CNN, leveraging a ResNet-50 backbone
-for the task of detecting thoracic abnormalities in chest X-ray images. The
-Faster R-CNN framework combines a Region Proposal Network (RPN) with a Fast
-R-CNN detector to efficiently identify and localize abnormalities.
+\subsection{Framework (PyTorch Lightning)}
+Training an object detection model such as Faster R-CNN requires a structured
+approach to efficiently manage data loading, training and inference. In this
+project, the PyTorch Lightning framework was used to perform the transfer
+learning operation on the Faster-R-CNN model.
 
-\subsection{Mathematical Foundation}
-\subsubsection{Region Proposal Network (RPN)}
-The RPN generates region proposals using a sliding window over the
-convolutional feature map obtained from the backbone. For each location, it
-predicts multiple potential bounding boxes and objectness scores. This can be
-formalized as:
+PyTorch Lightning is a framework that builds on PyTorch to provide a more
+organized code structure and reduce the amount of boilerplate code required. It
+provides a clear separation between model training logic and automation code,
+facilitating code development, debugging and reuse. PyTorch Lightning supports
+advanced features such as multi-GPU, TPU, distributed training and mixed
+precision, making the training process more efficient and scalable.
 
-\begin{equation}
-    O, B = \text{RPN}(F)
-\end{equation}
+\subsection{Data Loading}
+Data loading is an essential step in the training pipeline, requiring special
+attention to object detection due to the complexity of annotations and data
+formats. PyTorch Lightning uses PyTorch's DataLoader to automate data loading,
+blending and batch distribution, while allowing customization for specific
+cases such as object detection datasets. Data preparation often involves
+transformations such as resizing, normalizing and augmenting data to improve
+model generalization.
 
-where $F$ represents the feature map, $O$ the objectness score, and $B$ the
-bounding box coordinates for each proposal.
+\subsection{Training and Inference}
 
-\subsubsection{Anchor Boxes}
-Anchor boxes are predefined boxes of various scales and aspect ratios that
-serve as references at each sliding position. The RPN adjusts these anchors to
-better fit the objects. The adjustment is a regression problem, typically using
-a smooth L1 loss:
+Training an object detection model with PyTorch Lightning begins with the
+definition of the LightningModule, which encapsulates the model, data and
+optimization logic. During training, the model learns to predict bounding boxes
+and object classes in training images, using metrics such as loss to guide the
+optimization process. PyTorch Lightning facilitates the implementation of
+customized training routines and provides integrated tools for tracking
+performance, saving checkpoints, and resuming training.
 
-\begin{equation}
-    L_{\text{reg}} = \text{smooth}_{L1}(B_{\text{pred}}, B_{\text{gt}})
-\end{equation}
+Inference, or prediction from unseen data, involves using the trained model to
+detect objects in new images. The framework provides a simplified interface for
+model evaluation, facilitating the generation and evaluation of predictions on
+the validation or test set.
 
-where $B_{\text{pred}}$ are the predicted box adjustments and $B_{\text{gt}}$
-the ground truth box adjustments.
+\newpage
+\section{Model Optimization and Improvements}
+Model optimization and enhancements are crucial for maximizing the performance
+of an object detection model like Faster R-CNN. This section explores the key
+techniques involved in this process, including optimizer and learning rate
+planner selection and data augmentation.
 
-\subsubsection{Fast R-CNN Detector}
-The Fast R-CNN detector uses the proposals from the RPN, applying RoI Pooling
-to extract a fixed-size feature vector for each. These are then passed through
-fully connected layers to classify the object and refine the bounding box:
+\subsection{Optimizer and Learning Rate Scheduler}
+The choice of optimizer and learning rate planner plays a significant role in
+the effectiveness of model training.Optimizers such as SGD (Stochastic Gradient
+Descent) with momentum or Adam are commonly used due to their ability to
+efficiently navigate the complex loss landscapes often encountered in object
+detection model training.
 
-\begin{equation}
-    C, B' = \text{Fast R-CNN}(F_{\text{roi}})
-\end{equation}
+\begin{itemize}
+    \item \textbf{Optimizer:} The model implemented in this project uses Stochastic
+          Gradient Descent (SGD) optimizer, which is renowned for producing better generalized
+          models.
+    \item \textbf{Learning rate planners:}  The scheduler used was CosineAnnealingLR, which
+          adjusts the learning rate according to a cosine function, can improve model
+          performance by dynamically adjusting the learning rate during training. This
+          approach helps to avoid local minima and refine convergence towards the global
+          minimum~\cite{cyclicallr}.
+\end{itemize}
 
-where $F_{\text{roi}}$ are the RoI-pooled features, $C$ the class predictions,
-and $B'$ the refined bounding box predictions.
+\subsection{Data Augmentation}
+Data augmentation is an essential technique for improving model robustness and
+generalization by artificially increasing the diversity of training data. In
+the context of object detection, common transformations include:
+\begin{itemize}
+    \item \textbf{Rotate, Resize and Crop:} Modifies the perspective and size of objects in
+          images, helping the model learn to recognize objects at different angles and
+          scales.
+    \item \textbf{Horizontal/Vertical Inversion:} Helps generalize detection regardless of object
+          orientation.
+    \item \textbf{Color Change:} Adjusts brightness, contrast and saturation to enhance the
+          model's ability to recognize objects under different lighting and color
+          conditions.
+\end{itemize}
 
-\subsection{Training Workflow}
-\subsubsection{Loss Functions}
-The total loss for training the Faster R-CNN model is a combination of the RPN
-loss and Fast R-CNN loss:
+\section{Post-Validation}
+In order to avoid false positives, a binary classification Tree decision model
+was trained to predict whether a DICOM file has an anomaly or not.
 
-\begin{equation}
-    L = L_{\text{cls}}^{\text{RPN}} + L_{\text{reg}}^{\text{RPN}} + L_{\text{cls}}^{\text{Fast R-CNN}} + L_{\text{reg}}^{\text{Fast R-CNN}}
-\end{equation}
-
-where $L_{\text{cls}}$ and $L_{\text{reg}}$ denote the classification and
-regression losses, respectively, for each component.
-
-\subsubsection{Multi-Task Training}
-The model is trained end-to-end with a multi-task loss that optimizes both the
-RPN and Fast R-CNN simultaneously. This approach efficiently shares the
-convolutional features between the RPN and detector, significantly reducing the
-computational cost compared to training separate models.
-
-\subsection{Evaluation Metrics}
+\newpage
+\section{Evaluation Metrics}
 Model performance is assessed using mean Average Precision (mAP) and mean
 Average Recall (mAR) across different Intersection over Union (IoU) thresholds,
 providing a comprehensive evaluation of detection accuracy.
-
-\subsubsection{Mean Average Precision (mAP)}
-The mAP is calculated by averaging the precision across different recall levels
-for each class and then averaging over all classes:
-
-\begin{equation}
-    \text{mAP} = \frac{1}{|C|} \sum_{c \in C} \text{AP}_c
-\end{equation}
-
-where $C$ is the set of classes and $\text{AP}_c$ the average precision for
-class $c$.
-
-\subsubsection{Mean Average Recall (mAR)}
-Similarly, mAR measures the average recall across different precision levels,
-providing insight into the model's ability to detect all relevant instances.
-
-\section{Evaluation metrics for Faster R-CNN}
-
-To evaluate the performance of the Faster R-CNN model in the object detection
-task task, several metrics are used. These metrics provide a quantitative
-measure of the model's ability to correctly identify and locate objects in
-images.
 
 \subsection{Intersection over Union (IoU)}
 
@@ -637,7 +615,8 @@ ground truth:
 \end{equation}
 
 A prediction is considered correct if the IoU with a ground truth box field
-exceeds a certain threshold, typically set at 0.5.
+exceeds a certain threshold. In the context of the competition, this threshold
+is \textbf{0.4}.
 
 \subsection{Precision and Recall}
 
@@ -670,43 +649,55 @@ all classes:
 where $N$ is the number of classes and $AP_i$ is the Average Precision for
 class $i$.
 
-These metrics provide a comprehensive assessment of the performance of the
-Faster R-CNN model, measuring how accurately the model is able to detect and
-locate objects in different images.
-
 \chapter{Results and Discussion}
 \section{Results}
 
-\begin{figure}[H]
-    \centering
-    \begin{minipage}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{../results/true_labels.png}
-        \caption{True Labels}
-        \label{fig:true_labels}
-    \end{minipage}
-    \hfill % This inserts a space between the images. Adjust the space as needed.
-    \begin{minipage}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{../results/predictions.png}
-        \caption{Predicted labels}
-        \label{fig:predictions_without_filter} % Make sure the label matches the description
-    \end{minipage}
-\end{figure}
+The following results were obtained using the computing power of Cranfield
+university's HPC cluster. Two 32GB GPUs were used to train the models.
+
+\subsection{Training Loss Evolution}
+
+Several tests were ran using different setup (training images sizes, learning
+rate, optimiser, scheduler). As you can see in figure~\ref{fig:training_loss},
+noise decreases during the training with the number of epochs and tests
+performed.
+
+The best hyperparameters found were:
+\begin{itemize}
+    \item \textbf{Image Size:} 800 * 1000
+    \item \textbf{Learnint Rate:} 3e-3
+\end{itemize}
+
+At the start of the tests, the model converged after 6-7 hours of training, but
+as the training progressed, convergence began earlier (around 4 hours of
+training).
 
 \begin{figure}[H]
     \centering
-    \begin{minipage}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{../results/true_labels.png}
-        \caption{True Labels}
-        \label{fig:true_labels}
-    \end{minipage}
-    \hfill % This inserts a space between the images. Adjust the space as needed.
-    \begin{minipage}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{../results/predictions_with_filter.png}
-        \caption{Filtered Predicted labels}
-        \label{fig:predictions_with_filter} % Make sure the label matches the description
-    \end{minipage}
+    \includegraphics[width=0.8\textwidth]{../results/training.png}
+    \caption{Training Loss Evolution}
+    \label{fig:training_loss}
 \end{figure}
 
+\newpage
+\subsection{Validation Accuracy Evolution}
+
+Here is the evolution of accuracy on validation set.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../results/validation.png}
+    \caption{Validation Accuracy Evolution}
+    \label{fig:annotations_per_class}
+\end{figure}
+
+\subsection{Evaluation Metrics per Class}
+
+The total MAp value obtained was 0.1868. Therefore the mean accuracy of the
+model is 18,68\%, which is correct due to the provided dataset. As expected,
+accuracy is very high for classes with high representation, such as class 14.
+
+Here is a table summarising the accuracy of the results by class:
 
 \begin{table}[H]
     \centering
@@ -729,10 +720,51 @@ locate objects in different images.
         13             & 792         & 4841        & 312         & 0.141              & 0.717           & 0.235             & 0.0971       & 0.5115           \\ \hline
         14             & 3799        & 345         & 974         & 0.917              & 0.796           & 0.852             & 0.7276       & 0.7959           \\ \hline
     \end{tabular}
-    \caption{Extended Evaluation Metrics per Class}
+    \caption{Evaluation Metrics per Class}
     \label{tab:extended_metrics}
 \end{table}
 
+\newpage
+\subsection{Predictions Visualisation}
+
+Here are the predicted labels without score threshold filter. As visible, there
+are a lot of false positive, however the results are consistent with the
+referent.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{../results/true_labels.png}
+        \caption{True Labels}
+        \label{fig:true_labels}
+    \end{minipage}
+    \hfill % This inserts a space between the images. Adjust the space as needed.
+    \begin{minipage}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{../results/predictions.png}
+        \caption{Predicted labels}
+        \label{fig:predictions_without_filter} % Make sure the label matches the description
+    \end{minipage}
+\end{figure}
+
+Here are predicted labels with the score threshold filter. The results are more
+satisfying with filter!
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{../results/true_labels.png}
+        \caption{True Labels}
+        \label{fig:true_labels}
+    \end{minipage}
+    \hfill % This inserts a space between the images. Adjust the space as needed.
+    \begin{minipage}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{../results/predictions_with_filter.png}
+        \caption{Filtered Predicted labels}
+        \label{fig:predictions_with_filter} % Make sure the label matches the description
+    \end{minipage}
+\end{figure}
+
+\newpage
 \section{AI Ethical challenges in the medical sector}
 
 While the use of artificial intelligence in radiology holds enormous
@@ -749,7 +781,8 @@ from X-rays, require access to large volumes of sensitive medical data. It is
 imperative to ensure that this data is protected from unauthorised access or
 misuse, in compliance with regulations such as the RGPD in Europe or HIPAA in
 the United States. The implementation of advanced cryptographic techniques and
-access management systems is essential to secure this information.
+access management systems is essential to secure this
+information~\cite{Murdoch2021}.
 
 \subsection{Algorithmic bias and fairness}
 
@@ -759,7 +792,7 @@ resulting in variable performance across demographic groups. This raises the
 issue of fairness in automated diagnoses, where certain populations could be
 disadvantaged. To counter this problem, it is crucial to ensure that datasets
 are diverse and representative, and to develop methodologies for identifying
-and correcting algorithmic biases.
+and correcting algorithmic biases~\cite{Mittermaier2023}.
 
 \section{Transparency and Explicability}
 
@@ -769,7 +802,7 @@ deep neural networks, are often perceived as a "black box", making it difficult
 to understand and justify the diagnoses proposed. It is therefore imperative to
 work towards more explainable AI models, enabling healthcare professionals to
 understand and validate the recommendations provided by these systems before
-making clinical decisions.
+making clinical decisions~\cite{Amann2020}.
 
 \section{Responsibility and Professional Autonomy}
 
@@ -779,18 +812,26 @@ creators of AI systems, the healthcare professionals using them, and healthcare
 institutions requires in-depth legal and ethical reflection. Furthermore, the
 use of AI should not erode the professional autonomy of radiologists, but
 rather serve as a complementary tool enabling them to improve their accuracy
-and efficiency.
-
-\subsection{Conclusion}
-
-While AI promises to revolutionise the field of radiology, ensuring faster and
-more accurate diagnoses, it is essential to tackle the ethical challenges it
-raises head on.This requires close collaboration between AI developers,
-healthcare professionals, regulators, and patients, to ensure that these
-technologies advance in an ethical manner, enhancing the quality of medical
-care while respecting patients' rights and dignity.
+and efficiency~\cite{Naik2022}.
 
 \chapter{Conclusion}
+
+To conclude, this study demonstrated the transformative potential of artificial
+intelligence in the analysis of chest X-rays, offering a promising avenue for
+improving diagnostic accuracy and reducing interpretation times. Despite an
+average accuracy of 18.68\%, reflecting the challenges inherent in applying AI
+in this complex field, the results encourage future research to refine and
+extend these approaches. The moderate performance of the model can largely be
+attributed to the heterogeneity and imbalance of the dataset used, highlighting
+the crucial importance of well-balanced and homogeneous datasets in the
+development of efficient and reliable AI systems in medicine. In addition, the
+ethical implications highlighted are a reminder of the importance of developing
+these technologies in a responsible manner, ensuring the security of data, the
+accuracy of algorithms, and the transparency of decision-making processes. By
+continuing the collaboration between AI developers, healthcare professionals,
+and regulators, we can harness the full potential of AI to transform radiology
+and beyond, while carefully navigating the ethical and practical complexities
+of this new medical frontier.
 
 \bibliographystyle{CranfieldNumbered}
 \bibliography{CUCitations}

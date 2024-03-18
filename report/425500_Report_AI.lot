@@ -1,10 +1,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Recommended Metrics for Various Object Detection Use Cases\nobreakspace {}\cite {HuggingFaceObjectDetectionLeaderboard}\relax }}{4}{table.caption.4}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Recommended Metrics for Various Object Detection Use Cases\nobreakspace {}\cite {HuggingFaceObjectDetectionLeaderboard}\relax }}{4}{table.caption.5}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Classes and associated findings Abnormalities Detection dataset\relax }}{5}{table.caption.5}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Classes and associated findings Abnormalities Detection dataset\relax }}{6}{table.caption.6}%
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Extended Evaluation Metrics per Class\relax }}{14}{table.caption.12}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Evaluation Metrics per Class\relax }}{15}{table.caption.12}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
