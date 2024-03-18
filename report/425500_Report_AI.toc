@@ -47,12 +47,15 @@
 \contentsline {subsection}{\numberline {3.4.3}Mean Average Precision (mAP)}{12}{subsection.3.4.3}%
 \contentsline {chapter}{\numberline {4}Results and Discussion}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Results}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}AI Ethical challenges in the medical sector}{13}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Respect for Confidentiality and Data Security}{13}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Algorithmic bias and fairness}{13}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Transparency and Explicability}{14}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Responsibility and Professional Autonomy}{14}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Conclusion}{14}{subsection.4.4.1}%
-\contentsline {chapter}{\numberline {5}Conclusion}{15}{chapter.5}%
-\contentsline {chapter}{References}{16}{chapter*.10}%
-\contentsline {chapter}{\numberline {A}Source Codes}{17}{appendix.A}%
+\contentsline {section}{\numberline {4.2}AI Ethical challenges in the medical sector}{14}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Respect for Confidentiality and Data Security}{15}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Algorithmic bias and fairness}{15}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Transparency and Explicability}{15}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Responsibility and Professional Autonomy}{15}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Conclusion}{15}{subsection.4.4.1}%
+\contentsline {chapter}{\numberline {5}Conclusion}{16}{chapter.5}%
+\contentsline {chapter}{References}{17}{chapter*.13}%
+\contentsline {chapter}{\numberline {A}Source Codes}{18}{appendix.A}%
+\contentsline {section}{\numberline {A.A}Dataset Class}{18}{section.1.A.A}%
+\contentsline {section}{\numberline {A.B}Data Module Class}{21}{section.1.A.B}%
+\contentsline {section}{\numberline {A.C}Faster-R-CNN Lightning Model Class}{24}{section.1.A.C}%

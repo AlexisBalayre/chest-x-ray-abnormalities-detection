@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.14)  17 MAR 2024 23:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.14)  18 MAR 2024 06:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -611,7 +611,11 @@ LaTeX Info: Redefining \cite on input line 694.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 102.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-) (./425500_Report_AI.aux)
+) (./425500_Report_AI.aux
+
+LaTeX Warning: Label `fig:true_labels' multiply defined.
+
+)
 \openout1 = `425500_Report_AI.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
@@ -775,7 +779,7 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 23
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [3] [4]
 Chapter 3.
-<../results/annotations_per_class.png, id=224, 1019.81pt x 452.69125pt>
+<../results/annotations_per_class.png, id=238, 1019.81pt x 452.69125pt>
 File: ../results/annotations_per_class.png Graphic file (type png)
 <use ../results/annotations_per_class.png>
 Package pdftex.def Info: ../results/annotations_per_class.png  used on input line 369.
@@ -783,48 +787,78 @@ Package pdftex.def Info: ../results/annotations_per_class.png  used on input lin
 [5
 
 ]
-<../results/annotations_per_rad.png, id=230, 1019.81pt x 451.6875pt>
+<../results/annotations_per_rad.png, id=244, 1019.81pt x 451.6875pt>
 File: ../results/annotations_per_rad.png Graphic file (type png)
 <use ../results/annotations_per_rad.png>
 Package pdftex.def Info: ../results/annotations_per_rad.png  used on input line 382.
 (pdftex.def)             Requested size: 341.43437pt x 151.22836pt.
  [6 <../results/annotations_per_class.png>]
-<../results/annotations_per_rad_class.png, id=237, 819.5418pt x 617.9085pt>
+<../results/annotations_per_rad_class.png, id=251, 819.5418pt x 617.9085pt>
 File: ../results/annotations_per_rad_class.png Graphic file (type png)
 <use ../results/annotations_per_rad_class.png>
 Package pdftex.def Info: ../results/annotations_per_rad_class.png  used on input line 398.
 (pdftex.def)             Requested size: 341.43437pt x 257.42667pt.
  [7 <../results/annotations_per_rad.png> <../results/annotations_per_rad_class.png>] [8] [9] [10] [11] [12]
 Chapter 4.
+<../results/true_labels.png, id=304, 497.9403pt x 570.933pt>
+File: ../results/true_labels.png Graphic file (type png)
+<use ../results/true_labels.png>
+Package pdftex.def Info: ../results/true_labels.png  used on input line 683.
+(pdftex.def)             Requested size: 192.0548pt x 220.20625pt.
+<../results/predictions.png, id=305, 497.9403pt x 570.933pt>
+File: ../results/predictions.png Graphic file (type png)
+<use ../results/predictions.png>
+Package pdftex.def Info: ../results/predictions.png  used on input line 689.
+(pdftex.def)             Requested size: 192.0548pt x 220.20625pt.
+File: ../results/true_labels.png Graphic file (type png)
+<use ../results/true_labels.png>
+Package pdftex.def Info: ../results/true_labels.png  used on input line 698.
+(pdftex.def)             Requested size: 192.0548pt x 220.20625pt.
+<../results/predictions_with_filter.png, id=306, 497.9403pt x 570.933pt>
+File: ../results/predictions_with_filter.png Graphic file (type png)
+<use ../results/predictions_with_filter.png>
+Package pdftex.def Info: ../results/predictions_with_filter.png  used on input line 704.
+(pdftex.def)             Requested size: 192.0548pt x 220.20625pt.
 [13
 
-] [14]
+ <../results/true_labels.png> <../results/predictions.png>] [14 <../results/predictions_with_filter.png>] [15]
 Chapter 5.
-(./425500_Report_AI.bbl [15
+(./425500_Report_AI.bbl [16
 
-]) [16
+]) [17
 
 ]
 Appendix A.
-[17
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 803.
+ (../Faster-R-CNN/ChestXrayDataset.py [18
 
-] (./425500_Report_AI.aux)
+] [19]) [20] (../Faster-R-CNN/ChestXrayDataModule.py [21] [22]) [23] (../Faster-R-CNN/ChestXrayLightningModel.py [24] [25]) [26] (./425500_Report_AI.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `425500_Report_AI.out' has not changed.
-(rerunfilecheck)             Checksum: 5AA776576607C42BF5511C5FFAE86B47;1330.
+(rerunfilecheck)             Checksum: 2625A855D5B8451A52E57E98BF35A2E8;1330.
  ) 
 Here is how much of TeX's memory you used:
- 18383 strings out of 476025
- 309125 string characters out of 5790016
- 1863388 words of memory out of 5000000
- 38388 multiletter control sequences out of 15000+600000
- 547010 words of font info for 107 fonts, out of 8000000 for 9000
+ 19707 strings out of 476025
+ 327048 string characters out of 5790016
+ 2292388 words of memory out of 5000000
+ 39213 multiletter control sequences out of 15000+600000
+ 549270 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,12n,117p,532b,533s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 425500_Report_AI.pdf (23 pages, 307594 bytes).
+ 90i,12n,122p,532b,2434s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on 425500_Report_AI.pdf (32 pages, 1656113 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
- 324 compressed objects within 4 object streams
- 107 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1005 PDF objects out of 1200 (max. 8388607)
+ 926 compressed objects within 10 object streams
+ 582 named destinations out of 1000 (max. 500000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
 

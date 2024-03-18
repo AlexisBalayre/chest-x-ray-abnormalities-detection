@@ -36,7 +36,7 @@ chest-xray-abnormalities-detection/
 │   ├── show_image_with_predictions.py
 │   └── split_dataset.py
 │
-├── notebooks/             # Jupyter notebooks 
+├── notebooks/             # Jupyter notebooks
 │   ├── dataset_analysis.ipynb
 │   ├── features_extraction.ipynb
 │   ├── model_evaluation.ipynb
@@ -79,4 +79,3 @@ Install the required packages using the following command:
 ```bash
 pip install -r requirements.txt
 ```
-

@@ -6,5 +6,9 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Number of annotations per radiologist. The distribution shows significant variability in the number of annotations made by different radiologists.\relax }}{7}{figure.caption.8}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Number of annotations per radiologist and class. Darker colors indicate a higher number of annotations, showing a strong prevalence of 'No finding' annotations across all radiologists.\relax }}{7}{figure.caption.9}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces True Labels\relax }}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Predicted labels\relax }}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces True Labels\relax }}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Filtered Predicted labels\relax }}{14}{figure.caption.11}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
