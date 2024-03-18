@@ -1,6 +1,10 @@
 # Chest X-Ray Abnormalities Detection with Faster R-CNN
 
-This project implements a Faster R-CNN model with a ResNet-50 backbone for detecting abnormalities in chest X-ray images. Leveraging the power of PyTorch and PyTorch Lightning, the model is trained on a dataset of chest X-ray scans, annotating each with bounding boxes to localize and classify thoracic abnormalities.
+This project leverages the Faster R-CNN model with a ResNet-50 backbone, implemented using PyTorch Lightning, for the detection and localization of thoracic abnormalities in chest X-ray images. The model is trained on a curated dataset of chest X-ray scans, each annotated with bounding boxes to identify various abnormalities.
+
+## Project Overview
+
+Chest X-rays are among the most common radiographic examinations performed for diagnosing thoracic diseases. However, the interpretation of these images is highly reliant on the experience of radiologists, leading to the need for automated systems that can assist in accurately identifying and classifying potential abnormalities. This project aims to address this need by employing a Faster R-CNN model, known for its efficiency in object detection tasks.
 
 ## Project Structure
 
@@ -49,42 +53,55 @@ chest-xray-abnormalities-detection/
 
 ```
 
+### Prerequisites
+
+- Python 3.8 or later
+- pip for installing Python packages
+
 ## Getting Started
+
+1. Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/<your-repository>/chest-xray-abnormalities-detection.git
+cd chest-xray-abnormalities-detection
+```
+
+2. Create and activate a virtual environment:
 
 ```bash
 python -m venv chest-x-ray-abnormalities-detection
 ```
 
-Activate the virtual environment using the following command:
+3. Activate the virtual environment using the following command:
 
 ```bash
 source chest-x-ray-abnormalities-detection/bin/activate
 ```
 
-Install the required packages using the following command:
+4. Install the required packages using the following command:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Dataset Preparation
+### Dataset Preparation
 
-1. Place a full dataset CSV file in the `data` folder
-2. Modify the paths in the `utils/split_dataset.py` script and run it to prepare the training, validation and test datasets.
-3. Extract and process data from the DICOM files by using `run_data_preprocessing.py` script.
-4. Have a look on the distribution of the dataset by using `dataset_analysis.ipynb` notebook.
+1. Place the full dataset CSV file and DICOM images in the `data/` directory.
+2. Use the scripts in `preprocessing/` to extract and process DICOM images and metadata.
+3. Split the dataset into training, validation, and test sets with `utils/split_dataset.py`.
 
-## Training
+## Training the Models
 
-1. Train the Faster-R-CNN model using transfer learning with `train_faster-R-CNN_model.py` script.
-2. Train the Binary classifier model with the `train_binary_classifier.ipynb` notebook.
+- Train the Faster R-CNN model with `python train_faster-R-CNN_model.py`.
+- Train the binary classifier with `jupyter notebook train_binary_classifier.ipynb`.
 
-## Inference
+## Running Inference
 
-1. Run the Faster-R-CNN model inference with the test dataset using `run_faster-R-CNN_inferences.py`. You'll obtain a submission file.
-2. Convert the submission file to more friendly format using `utils/reformat_prediction_file.py`.
-3. Run the binary model inference with the test dataset using `run_binary_classifier_inference.ipynb` notebook.
+- Perform inference with the Faster R-CNN model using `python run_faster-R-CNN_inferences.py`.
+- Convert the submission file format with `python utils/reformat_prediction_file.py`.
+- Run binary classifier inference using `jupyter notebook run_binary_classifier_inference.ipynb`.
 
 ## Model Evaluation
 
-Evaluate the trained model using the `model_evaluation.ipynb` notebook.
+Evaluate the performance of the trained models using the `model_evaluation.ipynb` notebook, focusing on metrics such as mean Average Precision (mAP) and Intersection over Union (IoU).
