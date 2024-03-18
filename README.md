@@ -66,3 +66,25 @@ Install the required packages using the following command:
 ```bash
 pip install -r requirements.txt
 ```
+
+## Dataset Preparation
+
+1. Place a full dataset CSV file in the `data` folder
+2. Modify the paths in the `utils/split_dataset.py` script and run it to prepare the training, validation and test datasets.
+3. Extract and process data from the DICOM files by using `run_data_preprocessing.py` script.
+4. Have a look on the distribution of the dataset by using `dataset_analysis.ipynb` notebook.
+
+## Training
+
+1. Train the Faster-R-CNN model using transfer learning with `train_faster-R-CNN_model.py` script.
+2. Train the Binary classifier model with the `train_binary_classifier.ipynb` notebook.
+
+## Inference
+
+1. Run the Faster-R-CNN model inference with the test dataset using `run_faster-R-CNN_inferences.py`. You'll obtain a submission file.
+2. Convert the submission file to more friendly format using `utils/reformat_prediction_file.py`.
+3. Run the binary model inference with the test dataset using `run_binary_classifier_inference.ipynb` notebook.
+
+## Model Evaluation
+
+Evaluate the trained model using the `model_evaluation.ipynb` notebook.
