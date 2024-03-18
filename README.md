@@ -25,24 +25,22 @@ chest-xray-abnormalities-detection/
 │   └── Faster-R-CNN-Models/ # Faster-R-CNN models weights
 │
 ├── preprocessing/         # Scripts for data preprocessing
-│   ├── dicom_metadata_extraction.py
-│   ├── dicom_pixels_features_extraction.py
-│   └── dicom_pixels_processing.py
+│   ├── dicom_metadata_extraction.py # Extracts DICOM files metadata
+│   ├── dicom_pixels_features_extraction.py # Extracts features from DICOM files images
+│   └── dicom_pixels_processing.py # Extracts and processes images from DICOM files
 │
 ├── utils/                 # Utility scripts
-│   ├── get_pixel_array_from_hdf5.py
-│   ├── metrics.py
-│   ├── reformat_prediction_file.py
-│   ├── show_image_with_predictions.py
-│   └── split_dataset.py
+│   ├── get_pixel_array_from_hdf5.py # Retrieves the pixel array of a DICOM file
+│   ├── metrics.py # Evaluation Metrics (mAP, IoU)
+│   ├── reformat_prediction_file.py # Convert submission file format to classic dataframe
+│   ├── show_image_with_predictions.py # Visualise a chest radiography with predicted or true labels
+│   └── split_dataset.py # split the dataset in trainning, validation and test sets
 │
-├── notebooks/             # Jupyter notebooks
-│   ├── dataset_analysis.ipynb
-│   ├── features_extraction.ipynb
-│   ├── model_evaluation.ipynb
-│   ├── run_binary_classifier_inference.ipynb
-│   └── train_binary_classifier.ipynb
-│
+├── dataset_analysis.ipynb # Primary Analysis of the Dataset
+├── features_extraction.ipynb # Analysis of extracted features
+├── model_evaluation.ipynb # Evaluation of the trained model
+├── run_binary_classifier_inference.ipynb # Run inference with the binary classifier model
+├── train_binary_classifier.ipynb # Train the binary classifier model
 ├── run_data_preprocessing.py # Run Data Proprocessing (data and features extraction from DICOM files)
 ├── run_faster-R-CNN_inferences.py # Run inference with the faster-R-CNN model
 ├── train_faster-R-CNN_model.py # Train the faster-R-CNN model
@@ -50,17 +48,6 @@ chest-xray-abnormalities-detection/
 └── README.md              # Project readme with instructions and information
 
 ```
-
-## Dataset
-
-The dataset comprises 18,000 postero-anterior chest X-ray scans, each annotated by experienced radiologists. Annotations include 14 types of thoracic abnormalities and a class for "No finding".
-
-## Model Overview
-
-- **Backbone**: ResNet-50 for feature extraction.
-- **Region Proposal Network (RPN)**: Proposes candidate object bounding boxes.
-- **RoI Pooling**: Extracts a fixed-size feature vector from each Region of Interest (RoI).
-- **Detection Network**: Classifies RoIs and refines their bounding box coordinates.
 
 ## Getting Started
 
