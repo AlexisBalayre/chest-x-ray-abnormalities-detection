@@ -1,11 +1,12 @@
 # Chest X-Ray Abnormalities Detection with Faster R-CNN
 
-This project leverages the Faster R-CNN model with a ResNet-50 backbone, implemented using PyTorch Lightning, for the detection and localization of thoracic abnormalities in chest X-ray images. The model is trained on a curated dataset of chest X-ray scans, each annotated with bounding boxes to identify various abnormalities.
+This project leverages the Faster R-CNN model with a ResNet-50 backbone, implemented using PyTorch Lightning, for the detection and localization of thoracic abnormalities in chest X-ray images. The model is trained on a curated dataset of chest X-ray scans, each annotated with bounding boxes to identify various abnormalities. 
+
+<img width="787" alt="Screenshot 2024-03-18 at 15 32 40" src="https://github.com/AlexisBalayre/chest-x-ray-abnormalities-detection/assets/60859013/5017febb-eeda-4f96-b875-523fa616853e">
 
 ## Project Overview
 
-Chest X-rays are among the most common radiographic examinations performed for diagnosing thoracic diseases. However, the interpretation of these images is highly reliant on the experience of radiologists, leading to the need for automated systems that can assist in accurately identifying and classifying potential abnormalities. This project aims to address this need by employing a Faster R-CNN model, known for its efficiency in object detection tasks.
-
+Chest X-rays are among the most common radiographic examinations performed for diagnosing thoracic diseases. However, the interpretation of these images is highly reliant on the experience of radiologists, leading to the need for automated systems that can assist in accurately identifying and classifying potential abnormalities. This project aims to address this need by employing a Faster R-CNN model, known for its efficiency in object detection tasks. This project was carried out as part of the [VinBigData Chest X-ray Abnormalities Detection](https://www.kaggle.com/competitions/vinbigdata-chest-xray-abnormalities-detection) Kaggle competition.
 ## Project Structure
 
 ```
@@ -63,8 +64,8 @@ chest-xray-abnormalities-detection/
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/<your-repository>/chest-xray-abnormalities-detection.git
-cd chest-xray-abnormalities-detection
+git clone https://github.com/AlexisBalayre/chest-x-ray-abnormalities-detection
+cd chest-x-ray-abnormalities-detection
 ```
 
 2. Create and activate a virtual environment:
